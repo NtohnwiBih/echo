@@ -1,0 +1,73 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+generator client {
+  provider = "prisma-client"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model User {
+  id            String         @id @default(cuid())
+  createdAt     DateTime       @default(now())
+  conversations Conversation[]
+}
+
+model Character {
+  id            String         @id @default(cuid())
+  slug          String         @unique
+  name          String
+  systemPrompt  String
+  createdAt     DateTime       @default(now())
+  conversations Conversation[]
+}
+
+model Conversation {
+  id          String    @id @default(cuid())
+  userId      String
+  characterId String
+  createdAt   DateTime  @default(now())
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  character   Character @relation(fields: [characterId], references: [id])
+  messages    Message[]
+
+  @@index([userId, characterId])
+}
+
+enum MessageRole {
+  USER
+  ASSISTANT
+}
+
+model Message {
+  id             String       @id @default(cuid())
+  conversationId String
+  role           MessageRole
+  content        String
+  createdAt      DateTime     @default(now())
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  modelCalls     ModelCall[]
+
+  @@index([conversationId, createdAt])
+}
+
+model ModelCall {
+  id               String   @id @default(cuid())
+  task             String // chat, extract, embed
+  model            String
+  promptTokens     Int?
+  completionTokens Int?
+  firstTokenMs     Int?
+  totalMs          Int
+  error            String?
+  messageId        String?
+  createdAt        DateTime @default(now())
+  message          Message? @relation(fields: [messageId], references: [id], onDelete: SetNull)
+
+  @@index([task, createdAt])
+}
