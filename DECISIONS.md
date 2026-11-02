@@ -29,6 +29,11 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Details:** Port bound to localhost only; password required via `.env` (`.env.example` committed); extension enabled in the first migration; no restart policy, so it doesn't use RAM during benchmarks.
 **Revisit if:** vector search becomes slow at my real memory counts (measure in Phase 4).
 
+## 005:
+**Date:** 2026-11-02
+**Evidence:** Two migrations applied: `init` (enables the vector extension, 0.8.7) and `add_core_tables` (User, Character, Conversation, Message, ModelCall). The first migration was empty apart from the extension because I generated it before adding models; I fixed it with a second migration instead of editing an applied one.
+**Note:** `prisma migrate dev` does not generate the client in v7, so `prisma generate` runs separately (and in `postinstall`).
+
 ---
 
 ## Benchmarks
