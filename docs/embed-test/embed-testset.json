@@ -1,0 +1,32 @@
+{
+  "memories": [
+    { "id": "m1", "text": "The user has a brother named Daniel who is a nurse." },
+    { "id": "m2", "text": "The user has a cousin who works at the docks." },
+    { "id": "m3", "text": "The user prefers working alone on cases." },
+    { "id": "m4", "text": "The user promised to visit their sister Lena on Friday." },
+    { "id": "m5", "text": "The user is allergic to cats." },
+    { "id": "m6", "text": "Daniel was in the hospital and was released yesterday." },
+    { "id": "m7", "text": "The user was born in Lagos but moved to Yaounde two years ago." },
+    { "id": "m8", "text": "The user is afraid of deep water after a childhood accident." },
+    { "id": "m9", "text": "The user loves strong black coffee and dislikes tea." },
+    { "id": "m10", "text": "The user lost their father's watch and is trying to find it." },
+    { "id": "m11", "text": "The user does not trust the mayor after the council scandal." },
+    { "id": "m12", "text": "The user plays the guitar and practises every evening." }
+  ],
+  "queries": [
+    { "text": "What does Daniel do for a living?", "expected": "m1", "kind": "distractor" },
+    { "text": "Who works at the docks?", "expected": "m2", "kind": "distractor" },
+    { "text": "Do I like having partners on a case?", "expected": "m3", "kind": "paraphrase" },
+    { "text": "What am I supposed to do this Friday?", "expected": "m4", "kind": "paraphrase" },
+    { "text": "Should we meet at the Whiskers cafe?", "expected": "m5", "kind": "indirect" },
+    { "text": "How is my brother doing after his stay at the clinic?", "expected": "m6", "kind": "paraphrase" },
+    { "text": "Where did I grow up?", "expected": "m7", "kind": "paraphrase" },
+    { "text": "Can we take the boat across the bay?", "expected": "m8", "kind": "indirect" },
+    { "text": "What should I order to drink?", "expected": "m9", "kind": "indirect" },
+    { "text": "Is there any news on the missing heirloom?", "expected": "m10", "kind": "paraphrase" },
+    { "text": "What do I think of the city's leader?", "expected": "m11", "kind": "paraphrase" },
+    { "text": "What instrument do I play?", "expected": "m12", "kind": "easy" },
+    { "text": "What is your favourite colour?", "expected": null, "kind": "no answer" },
+    { "text": "Tell me about the weather on Mars.", "expected": null, "kind": "no answer" }
+  ]
+}

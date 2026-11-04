@@ -1,0 +1,33 @@
+{
+  "model": "llama3.1:8b",
+  "stream": false,
+  "options": { "temperature": 0, "seed": 1 },
+  "format": {
+    "type": "object",
+    "properties": {
+      "memories": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "type": { "type": "string", "enum": ["fact", "preference", "event", "promise", "emotion"] },
+            "content": { "type": "string" },
+            "importance": { "type": "integer" }
+          },
+          "required": ["type", "content", "importance"]
+        }
+      }
+    },
+    "required": ["memories"]
+  },
+  "messages": [
+    {
+      "role": "system",
+      "content": "You extract long-term memories about the USER from a conversation with a character named Mira. Rules: only store things the user said about themselves or their life. Never store things Mira said. If the user corrects something, store only the corrected version. Ignore small talk. Write each memory as a short third-person sentence starting with The user. Choose the type carefully. fact = lasting information about the user or people in their life. preference = something the user likes, dislikes or prefers. event = something that happened, with its time if given. promise = something the user committed to do, with the date if given. emotion = a strong feeling the user expressed. A promise or an event must not be typed as fact. importance is 1 (trivial) to 5 (very important)."
+    },
+    {
+      "role": "user",
+      "content": "Conversation:\nUser: Hey Mira. I'm back. My brother Daniel finally got out of the hospital yesterday.\nMira: I'm glad he's recovering. You said he works at the docks, right?\nUser: No, that's my cousin. Daniel is a nurse.\nMira: Noted. I'll stop mixing them up.\nUser: I prefer working alone on cases. I'm bad with partners. Also, I promised my sister Lena I'd visit her on Friday.\nMira: Then we should finish the station lead before Friday.\nUser: Fine. Oh, and I'm allergic to cats, so don't send me anywhere near the Whiskers cafe."
+    }
+  ]
+}
