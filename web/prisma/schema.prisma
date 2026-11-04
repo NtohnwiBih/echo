@@ -25,6 +25,7 @@ model Character {
   systemPrompt  String
   createdAt     DateTime       @default(now())
   conversations Conversation[]
+  version       Int            @default(1)
 }
 
 model Conversation {
