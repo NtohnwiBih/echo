@@ -34,11 +34,27 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Evidence:** Two migrations applied: `init` (enables the vector extension, 0.8.7) and `add_core_tables` (User, Character, Conversation, Message, ModelCall). The first migration was empty apart from the extension because I generated it before adding models; I fixed it with a second migration instead of editing an applied one.
 **Note:** `prisma migrate dev` does not generate the client in v7, so `prisma generate` runs separately (and in `postinstall`).
 
+## 006: Embedding model: mxbai-embed-large (1024 dims)
+**Context:** Memory retrieval needs an embedding model, and its dimension fixes the vector column size.
+**Options:** nomic-embed-text (768 dims), mxbai-embed-large (1024 dims), each with and without prefixes.
+**Decision:** mxbai-embed-large, queries prefixed, memories not prefixed.
+**Evidence:** 12 answerable queries, 12 memories. Recall@3 12/12 vs 11/12 for nomic; score gap ~0.20 vs 0.09-0.13. About 25-29 ms per text for all variants. Small test, differences of one query are not significant.
+**Design note:** Indirect queries (Whiskers cafe -> cat allergy) fail on every model. Always-include rule for high-importance memories (Phase 4).
+**Revisit if:** Phase 3 retrieval evals on real extracted memories disagree, or RAM pressure from the 1024-dim model matters.
+
+## 007: Characters defined in code, seeded into the database
+**Context:** Character prompts change often while I tune them, and they need to be versioned.
+**Decision:** Definitions live in `src/lib/characters.ts` (typed, tested) and `prisma db seed` upserts them. Shared rules (reply length, AI disclosure, crisis behaviour) are added by the prompt assembler, not stored per character.
+**Dev user:** a seeded `dev-user` lets me test chat before auth exists. Remove it when login arrives in Phase 2.
+**Revisit if:** non-developers need to edit characters (Phase 2+ creator tools).
+
 ---
 
 ## Benchmarks
 
-| Model | Size / quant | Prompt tok/s | Gen tok/s | Model RAM | CPU/GPU |
-|---|---|---|---|---|---|
-| llama3.1:8b | (check with `ollama show`) | (measure) | ~9.4 | 5.6 GB | 100% CPU |
-| qwen2.5:7b | (quant from `ollama show`) | 81 (1,096-token prompt) | 7.3 | ~5-6 GB | 100% CPU |
+| Model | Prompt | Valid JSON | Content captured (of 6) | Type errors | Gen tok/s | Total s |
+|---|---|---|---|---|---|---|
+| qwen2.5:7b | v1 | 5/5 | 5 | all typed "fact" | ~9.9 | 15-31 |
+| llama3.1:8b | v1 | 3/3 | 4 | all typed "fact" | ~9.4 | 16-19 |
+| qwen2.5:7b | v2 | 3/3 | 3 | preference typed "fact" | ~6.8 | 13.5 |
+| llama3.1:8b | v2 | 3/3 | 6 | allergy typed "preference", importance 1 | ~6.8 | 31 |
