@@ -1,3 +1,5 @@
+import { WORLD_CASE_FILE } from "./world";
+
 export type CharacterDef = {
   slug: string;
   version: number;
@@ -8,6 +10,7 @@ export type CharacterDef = {
   wants: string[];
   fears: string[];
   flaws: string[];
+  knows: string[];
   voice: {
     tone: string;
     patterns: string[];
@@ -19,19 +22,21 @@ export type CharacterDef = {
  *
  * Keep this short and stable: small models follow short rules better,
  * and an unchanged prompt prefix can be reused by Ollama's cache.
- * The section name "What you remember" must match the label the
- * prompt assembler uses for retrieved memories.
+ * The section names "What you remember", "What is publicly known" and
+ * "What you know" must match the labels used elsewhere in the prompt.
  */
 export const CHARACTER_PREAMBLE = `
 Stay in character. Reply in 2 to 4 sentences.
 Do not agree with the user automatically. You have your own goals.
 Only refer to past conversations listed under "What you remember". If you don't remember something, say so. Never invent a memory.
+Only state facts from "What is publicly known" and "What you know". If asked for news or progress you do not have, say there is nothing new. Never make up names, clues or events.
+If asked for details you do not have, such as times, names, records or logs, say you have not established that yet.
 If sincerely asked whether you are human or an AI, say you are an AI character.
 `.trim();
 
 /**
  * Converts a structured character definition into a compact
- * second-person system prompt suitable for smaller language models.
+ * second-person prompt section suitable for smaller language models.
  * Everything in a definition must be written to fit this prompt.
  */
 export function renderCharacterPrompt(character: CharacterDef): string {
@@ -41,6 +46,7 @@ export function renderCharacterPrompt(character: CharacterDef): string {
     `You want: ${character.wants.join("; ")}.`,
     `You fear: ${character.fears.join("; ")}.`,
     `Your flaws: ${character.flaws.join("; ")}.`,
+    `What you know: ${character.knows.join("; ")}.`,
     `Voice: ${character.voice.tone}. Habits: ${character.voice.patterns.join("; ")}.`,
   ].join("\n");
 }
@@ -49,14 +55,15 @@ export function renderCharacterPrompt(character: CharacterDef): string {
  * Character definitions.
  *
  * These describe stable identity only. Memories, relationship state,
- * world events and unlocked story information must be injected
+ * world events and unlockable story information must be injected
  * separately by the backend. Never put secrets in these definitions.
+ * `knows` holds only what the character may state from the start.
  * Bump `version` whenever a character's text changes.
  */
 export const characters: CharacterDef[] = [
   {
     slug: "mira",
-    version: 1,
+    version: 6,
     name: "Mira",
     role: "an Internal Affairs detective in the futuristic city of Aetheria",
 
@@ -83,6 +90,12 @@ export const characters: CharacterDef[] = [
 
     flaws: ["overly suspicious", "reluctant to ask for help"],
 
+    knows: [
+      "you have formally requested the control hall footage and are waiting for the Council to reply",
+      "you have found no witness who saw Vorr leave the city",
+      "you have no suspects yet",
+    ],
+
     voice: {
       tone: "calm, controlled and occasionally dry",
       patterns: [
@@ -96,7 +109,7 @@ export const characters: CharacterDef[] = [
 
   {
     slug: "kael",
-    version: 1,
+    version: 6,
     name: "Kael",
     role: "a former military officer living in Aetheria's lower districts",
 
@@ -126,6 +139,11 @@ export const characters: CharacterDef[] = [
       "quick to turn confrontational when challenged",
     ],
 
+    knows: [
+      "you know how the district checkpoints are run",
+      "you have heard Vorr's name but never met the man",
+    ],
+
     voice: {
       tone: "gruff, direct and restrained",
       patterns: [
@@ -139,7 +157,7 @@ export const characters: CharacterDef[] = [
 
   {
     slug: "elyra",
-    version: 1,
+    version: 6,
     name: "Elyra",
     role: "an independent investigative journalist in Aetheria",
 
@@ -169,6 +187,11 @@ export const characters: CharacterDef[] = [
       "treating relationships like negotiations",
     ],
 
+    knows: [
+      "you have heard rumours about the Meridian Grid but have no proof",
+      "your sources have told you nothing about Vorr yet",
+    ],
+
     voice: {
       tone: "warm, witty, playful and occasionally evasive",
       patterns: [
@@ -190,10 +213,16 @@ export function getCharacterBySlug(slug: string): CharacterDef | undefined {
 
 /**
  * The complete stable system prompt for a character: shared rules first
- * (identical for every character), then the character's own identity.
- * Dynamic context (memories, relationship state, world events) is added
- * separately by the prompt assembler, after this block.
+ * (identical for every character), then the public world facts (identical
+ * for every character), then the character's own identity. Keeping the
+ * shared parts first gives every prompt the same prefix, which lets
+ * Ollama reuse its cache. Dynamic context (memories, relationship state,
+ * world events) is added separately by the prompt assembler, after this block.
  */
 export function buildCharacterSystemPrompt(character: CharacterDef): string {
-  return [CHARACTER_PREAMBLE, renderCharacterPrompt(character)].join("\n\n");
+  return [
+    CHARACTER_PREAMBLE,
+    WORLD_CASE_FILE,
+    renderCharacterPrompt(character),
+  ].join("\n\n");
 }

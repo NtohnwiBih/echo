@@ -6,9 +6,10 @@ import {
   getCharacterBySlug,
   renderCharacterPrompt,
 } from "./characters";
+import { WORLD_CASE_FILE } from "./world";
 
-// Rough estimate: 1 token is about 4 characters of English.
-// Replace with the real token count from the model once the gateway exists.
+// Rough estimate: 1 token is about 4 characters of English. It runs about
+// 20% high against the real count (see the promptTokens column of ModelCall).
 const estimateTokens = (text: string) => Math.ceil(text.length / 4);
 
 describe("characters", () => {
@@ -35,6 +36,7 @@ describe("characters", () => {
         c.wants,
         c.fears,
         c.flaws,
+        c.knows,
         c.voice.patterns,
       ]) {
         expect(list.length).toBeGreaterThan(0);
@@ -49,9 +51,15 @@ describe("characters", () => {
     }
   });
 
+  it("renders what the character knows", () => {
+    for (const c of characters) {
+      expect(renderCharacterPrompt(c)).toContain("What you know:");
+    }
+  });
+
   it("keeps the full system prompt within the token budget", () => {
     for (const c of characters) {
-      expect(estimateTokens(buildCharacterSystemPrompt(c))).toBeLessThan(400);
+      expect(estimateTokens(buildCharacterSystemPrompt(c))).toBeLessThan(640);
     }
   });
 
@@ -64,8 +72,27 @@ describe("characters", () => {
     }
   });
 
-  it("tells the model which section holds its memories", () => {
+  it("includes the world case file after the shared rules", () => {
+    for (const c of characters) {
+      const prompt = buildCharacterSystemPrompt(c);
+      expect(prompt).toContain(WORLD_CASE_FILE);
+      expect(prompt.indexOf(WORLD_CASE_FILE)).toBeGreaterThan(
+        prompt.indexOf(CHARACTER_PREAMBLE),
+      );
+    }
+  });
+
+  it("uses section names that match the prompt labels", () => {
     expect(CHARACTER_PREAMBLE).toContain("What you remember");
+    expect(CHARACTER_PREAMBLE).toContain("What is publicly known");
+    expect(CHARACTER_PREAMBLE).toContain("What you know");
+    expect(WORLD_CASE_FILE.startsWith("What is publicly known")).toBe(true);
+  });
+
+  it("keeps digits out of the world case file", () => {
+    // The invention check treats any digit in a reply as invented,
+    // so the case file must spell numbers out (for example "eleven").
+    expect(WORLD_CASE_FILE).not.toMatch(/\d/);
   });
 
   it("finds a character by slug", () => {
