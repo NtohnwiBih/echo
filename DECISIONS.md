@@ -48,6 +48,15 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Dev user:** a seeded `dev-user` lets me test chat before auth exists. Remove it when login arrives in Phase 2.
 **Revisit if:** non-developers need to edit characters (Phase 2+ creator tools).
 
+## 008: Anti-invention measures for character replies
+**Context:** With no facts to state, the character invents names, times and clues (observed in smoke tests).
+**Changes:** world case file, `knows` lines per character, rules against inventing, fallback for missing details (prompt v4). Then true answers added to the case file for the questions players ask (last witness, badge, footage), and a closed-world line (prompt v5).
+**Evidence (llama3.1:8b, Mira, temp 0.3, 24 replies, fixed seeds):** The names/numbers check flagged 5/24, but a hand count found about 11/24 hard inventions. Questions the case file answers improved (last witness: 2/4 inventing to 0/4). Questions it does not answer still invented (8/12 on the three unseen ones). Repeated defaults ("Elara Vex", "22:47") suggest learned defaults, not random improvisation.
+**Metric fixes:** now also flags number words and quotation marks. Plain-word invented clues still need hand labelling (hard/soft).
+**Decision:** chat temperature 0.3 (provisional). Reply model undecided pending the same check on qwen2.5:7b. Closed-world line tested next on six unseen questions.
+**Revisit if:** replies read as flat at 0.3, the held-out group stays high, or the Phase 5 harness shows a different rate.
+**Idea for later:** store a hash of the final prompt text with each model call, so a prompt change can never go unrecorded.
+
 ---
 
 ## Benchmarks
