@@ -25,17 +25,13 @@ describe("readNdjson", () => {
   });
 
   it("handles a line split across chunks", async () => {
-    const out = await collect(
-      streamOfBytes([enc.encode('{"a":1}\n{"a"'), enc.encode(":2}\n")]),
-    );
+    const out = await collect(streamOfBytes([enc.encode('{"a":1}\n{"a"'), enc.encode(":2}\n")]));
     expect(out).toEqual([{ a: 1 }, { a: 2 }]);
   });
 
   it("handles a multi-byte character split across chunks", async () => {
     const bytes = enc.encode('{"t":"é"}\n'); // é is two bytes, at index 6 and 7
-    const out = await collect(
-      streamOfBytes([bytes.slice(0, 7), bytes.slice(7)]),
-    );
+    const out = await collect(streamOfBytes([bytes.slice(0, 7), bytes.slice(7)]));
     expect(out).toEqual([{ t: "é" }]);
   });
 

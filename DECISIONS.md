@@ -57,6 +57,20 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Revisit if:** replies read as flat at 0.3, the held-out group stays high, or the Phase 5 harness shows a different rate.
 **Idea for later:** store a hash of the final prompt text with each model call, so a prompt change can never go unrecorded.
 
+## 09: Retrieval needs a fallback line, and facts must be atomic
+**Evidence:** probe 2 (218 facts, top 5): the expected document came back for 57/57 questions, with 0 permission violations. Scores measure topic closeness, not whether an answer exists: off-topic questions scored up to 0.51 and on-topic ones as low as 0.50 (first-person questions such as "What are you afraid of?"). A multi-idea bullet (audit, relay address, unknown) lost its ranking until split into three.
+**Decision:** cut-off lowered to 0.40 (floor for nonsense only); the knowledge block always ends with a line telling the character to say it does not know when the facts do not answer. Content bullets carry one idea each.
+
+## 010: Facts travel in the last message, not the system prompt
+**Decision:** the system prompt (shared rules and character identity) is identical for every question so Ollama can cache it; retrieved facts and the player's message go in the final user message. The per-character `knows` list and the static world file are replaced by retrieval.
+**Revisit if:** the model ignores facts placed in the user turn.
+
+## 011: Retrieval-based prompt, first end-to-end measurement
+**Evidence (llama3.1:8b, Mira, temp 0.3, 72 replies, one hand labeller):** 4 hard (5.6%, 95% interval roughly 2-13%), 7 borderline, 4 soft, 57 clean. On 6 questions with no matching fact: 1 hard in 24 (invented "Arin Vex"). Script flagged 8: 3 real, 5 false (4 x "Nine", 1 quoted reply); it missed 2 of 4 hard. Prompt 376 tokens (was 510); total 3.2 s (cached first token 470 ms flatters it). The no-information block never fired (0/18): in-world questions are always near some fact, so strictness rests on the fallback line.
+**Problems found:** invented memories ("two days since we last spoke"); prompt leakage ("the information provided"); one document's near-identical bullets crowded out Mira's own knowledge; terse, repetitive voice.
+**Changes:** explicit "nothing remembered" line, reworded fallback, max three facts per document, quote check ignores wrapped replies.
+**Caveat:** the old held-out questions are no longer held out, since content was written after they failed.
+
 ---
 
 ## Benchmarks

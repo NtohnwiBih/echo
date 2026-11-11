@@ -24,9 +24,7 @@ export type ChatRequest = {
   signal?: AbortSignal;
 };
 
-export type ChatChunk =
-  | { type: "delta"; text: string }
-  | { type: "done"; usage: Usage };
+export type ChatChunk = { type: "delta"; text: string } | { type: "done"; usage: Usage };
 
 /** Anything that can talk to a model. Ollama today, another provider later. */
 export interface ModelProvider {

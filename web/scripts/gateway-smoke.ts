@@ -1,8 +1,5 @@
 import "dotenv/config";
-import {
-  buildCharacterSystemPrompt,
-  getCharacterBySlug,
-} from "../src/lib/characters";
+import { buildCharacterSystemPrompt, getCharacterBySlug } from "../src/lib/characters";
 import { createGateway } from "../src/lib/gateway/gateway";
 import { gatewayConfig } from "../src/lib/gateway/config";
 import { createOllamaProvider } from "../src/lib/gateway/ollama";

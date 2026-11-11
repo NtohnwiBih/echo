@@ -9,8 +9,7 @@ export const gatewayConfig: GatewayConfig = {
     embed: "mxbai-embed-large", // 1024 dimensions
   },
   // mxbai expects this prefix on search queries, not on stored memories.
-  embedQueryPrefix:
-    "Represent this sentence for searching relevant passages: ",
+  embedQueryPrefix: "Represent this sentence for searching relevant passages: ",
   // 220 tokens is roughly 160 words: a hard stop above the 2-4 sentence rule.
   chat: { temperature: 0.8, maxTokens: 220 },
 };

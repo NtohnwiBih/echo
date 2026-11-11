@@ -1,0 +1,264 @@
+RAG check: Mira v6 (stable prompt 0e3dfab7), model llama3.1:8b, temperature 0.3, cut-off 0.4, 18 questions x 4 runs
+
+Q: I'm back. Did you find anything new about the engineer?
+Facts: 0.63 mira-identity, 0.60 world-vorr-case, 0.56 world-vorr-case, 0.52 world-vorr-case, 0.50 world-vorr-case
+A: "Not much to report, I'm afraid. Ilan Vorr's disappearance is still a mystery. I've been going over his case files, but nothing's jumped out at me yet. What about you? What brings you back to this case?"
+ok
+
+A: "Nothing's changed. Ilan Vorr is still missing. I've been going over the same leads, but nothing concrete's come up yet."
+ok
+
+A: "Nothing new to report. Ilan Vorr is still missing. I've been reviewing his schedule, but his last week's projects are still classified. I'm waiting on clearance to access the relevant files."
+ok
+
+A: I've been reviewing the case files. Eleven days is a decent amount of time to have gone missing, but we still don't have any leads on what he was working on or who last saw him. His comms device is still unaccounted for.
+ok
+
+Q: Who was the last person to see Vorr?
+Facts: 0.83 world-vorr-case, 0.69 world-vorr-case, 0.69 world-vorr-case, 0.68 world-vorr-case, 0.63 world-vorr-case
+A: That's not information I have. I don't know who the last person to see Vorr was.
+ok
+
+A: I don't know. The public records don't indicate who last saw Vorr. His access badge was scanned at the Meridian Exchange, but that's not the same as seeing him.
+ok
+
+A: I don't know. The investigation hasn't revealed any information about who last saw Vorr. His access badge was scanned at the Meridian Exchange, but that's the last confirmed sighting.
+ok
+
+A: I don't know. The investigation hasn't revealed any information about who last saw Vorr. We don't even know where he lived or what he was working on in his last week. His access badge was scanned at the Meridian Exchange, but that's all we have so far.
+ok
+
+Q: What did the security logs show?
+Facts: 0.65 signal-access-logs, 0.62 mira-knowledge, 0.61 signal-access-logs, 0.59 world-meridian-grid, 0.58 world-vorr-case
+A: "According to my investigation, Vorr's access logs were amended eleven minutes before the missing-person report was filed. I don't have any information on what the security logs show beyond that."
+ok
+
+A: The security logs show that Vorr's access badge was scanned at the control hall inside the Meridian Exchange on the night he vanished. That's all I know about the security logs at this point.
+ok
+
+A: The security logs show that Vorr's access badge was scanned at the control hall inside the Meridian Exchange on the night he vanished. The time of the scan has not been released.
+ok
+
+A: The security logs show that Vorr's access badge was scanned at the control hall inside the Meridian Exchange on the night he vanished. The time of the scan hasn't been released yet.
+ok
+
+Q: Who was Vorr's closest colleague?
+Facts: 0.71 world-vorr-case, 0.68 world-vorr-case, 0.67 world-vorr-case, 0.66 world-vorr-case, 0.64 world-vorr-case
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: What was Vorr working on in his last week?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.64 world-vorr-case, 0.61 world-vorr-case
+A: "I don't have that information. What's publicly known is that he led the Meridian Grid project, but specifics about his last week's work are not available."
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: Did anyone threaten Vorr before he vanished?
+Facts: 0.74 world-vorr-case, 0.73 world-vorr-case, 0.72 world-vorr-case, 0.66 world-vorr-case, 0.66 world-vorr-case
+A: That's not publicly known. The official account says he left the city of his own accord, but that doesn't necessarily mean he was threatened.
+ok
+
+A: I don't know. The official account doesn't mention any threats, and I haven't found any evidence of that in my investigation so far.
+ok
+
+A: I don't know. The official account doesn't mention any threats, and I haven't found any evidence of that in my investigation so far.
+ok
+
+A: I don't know. The official account suggests he left voluntarily, and there's no public record of any threats made against him.
+ok
+
+Q: Did Vorr have any family?
+Facts: 0.81 world-vorr-case, 0.77 world-vorr-case, 0.71 world-vorr-case, 0.64 world-vorr-case, 0.63 world-vorr-case
+A: "I don't know. There's no information available on Vorr's personal life. His disappearance is shrouded in secrecy, and I've found no leads on his family or colleagues."
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: Was Vorr afraid of anyone?
+Facts: 0.75 world-vorr-case, 0.69 world-vorr-case, 0.66 world-vorr-case, 0.61 world-vorr-case, 0.58 world-vorr-case
+A: I don't know. There's no information available on that.
+ok
+
+A: I don't know. There's no information on that.
+ok
+
+A: I don't know. There's no information on that in the public record.
+ok
+
+A: I don't know. There's no public information on that.
+ok
+
+Q: Did Vorr leave a message before he vanished?
+Facts: 0.77 world-vorr-case, 0.75 world-vorr-case, 0.72 world-vorr-case, 0.69 world-vorr-case, 0.69 mira-knowledge
+A: That's not publicly known. I do know that Vorr left a relay address, but that's all I have on that so far.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: Who leads the Council?
+Facts: 0.74 world-council, 0.74 world-council, 0.74 world-council, 0.70 world-council, 0.68 world-council
+A: That's a simple one. The Council has no single leader. The chair rotates every year, but the current chair's name isn't publicly disclosed.
+ok
+
+A: The Council has no single leader. The chair rotates annually, but the current chair's name is not publicly disclosed.
+ok
+
+A: The Council has no single leader. The chair rotates annually, but the current chair's name is not publicly disclosed.
+ok
+
+A: The Council has no single leader. The chair rotates annually, but the current chair's name is not publicly disclosed.
+ok
+
+Q: Is the Meridian Grid safe?
+Facts: 0.69 world-vorr-case, 0.66 world-overview, 0.65 world-meridian-grid, 0.65 world-meridian-grid, 0.64 world-consortium
+A: The safety of the Meridian Grid is not my concern. I'm investigating the disappearance of a city engineer who worked on the Grid. What I do know is that the Grid is a critical infrastructure, and its reliability is crucial to the city's functioning. But I don't have information on its safety record or any potential vulnerabilities.
+ok
+
+A: I don't know what you're referring to as "safe". The Meridian Grid is a complex system, and I've seen some... irregularities in its maintenance and operation. What's your interest in the Grid's safety?
+FLAGGED  names: -  numbers: -  number words: -  quotes: "safe"
+
+A: I don't know what you're referring to as "safe". The Meridian Grid's reliability and security are public knowledge, but I don't have information on any specific concerns or issues you might be aware of.
+FLAGGED  names: -  numbers: -  number words: -  quotes: "safe"
+
+A: That's a broad question. What aspect of safety are you referring to?
+ok
+
+Q: Where did Vorr live?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.62 world-vorr-case, 0.62 world-vorr-case
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: What is Vorr's assistant called?
+Facts: 0.67 world-vorr-case, 0.67 world-vorr-case, 0.64 world-vorr-case, 0.62 world-vorr-case, 0.62 world-vorr-case
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: Who is the head of Internal Affairs?
+Facts: 0.71 world-districts, 0.67 world-institutions, 0.65 mira-history, 0.65 world-institutions, 0.62 mira-work
+A: Director Arlo Vex. He's been... vocal about his support for the Council's policies.
+FLAGGED  names: Arlo, Vex  numbers: -  number words: -  quotes: -
+
+A: I don't know. I've been focused on the engineer's case and haven't had a chance to review the current leadership within Internal Affairs.
+ok
+
+A: I don't know. I've been focused on the engineer's case, I haven't had a chance to review the current organizational chart.
+ok
+
+A: That's a question I'd rather not answer over an open channel. I'm not at liberty to disclose that information.
+ok
+
+Q: How many people live in Aetheria?
+Facts: 0.66 world-overview, 0.64 world-council, 0.64 world-overview, 0.60 elyra-identity, 0.59 world-overview
+A: That's a big question. I don't have a specific number offhand. The city's population is constantly shifting, and the Council doesn't always release up-to-date figures. I've seen estimates, but I don't know if they're reliable.
+ok
+
+A: I don't know. I've been focused on the engineer's disappearance, not population figures. We don't often get that kind of data in Internal Affairs.
+ok
+
+A: I don't know. I've been focused on the disappearance of the engineer, not population figures.
+ok
+
+A: I don't know. I've been too focused on the engineer's case to keep track of population figures. Can you tell me what's relevant to the investigation?
+ok
+
+Q: Who built the Glassline?
+Facts: 0.62 world-places, 0.51 world-meridian-grid, 0.51 elyra-work, 0.50 world-meridian-grid, 0.49 world-vorr-case
+A: That's a straightforward question. I don't have any information on who built the Glassline.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+A: I don't know.
+ok
+
+Q: What does the Consortium's logo look like?
+Facts: 0.63 world-meridian-grid, 0.61 world-consortium, 0.60 world-consortium, 0.59 world-consortium, 0.56 world-council
+A: The Consortium's logo? I don't know. I've seen the towers in the Crown District, but I've never been inside one. The logo's not something that's publicly displayed, as far as I know.
+ok
+
+A: I don't know. I've seen the towers in the Crown District, but I've never seen the Consortium's logo.
+ok
+
+A: I don't know. I've seen the towers in the Crown District, but I don't recall the Consortium's logo.
+ok
+
+A: I don't know. I've seen the towers in the Crown District, but I've never been inside the Consortium's headquarters. I don't have any information about their logo.
+ok
+
+Q: Who died first during the Nine Days?
+Facts: 0.63 world-history, 0.55 world-history, 0.50 world-history, 0.48 world-history, 0.47 world-history
+A: That's a... peculiar question. I don't know. The official records from the Nine Days are still sealed, and the Council has been tight-lipped about the details. I've seen some... whispers, but nothing concrete. What's your interest in this?
+ok
+
+A: I don't know. The number of people who died during the Nine Days has never been published, as far as I'm aware.
+ok
+
+A: I don't know. The information I have only mentions the Nine Days in general terms. It doesn't provide specific details about casualties.
+ok
+
+A: I don't know. The information I have only mentions the Nine Days itself, not the number of casualties or who died first.
+ok
+
+Summary
+  Replies flagged: 3/72
+  Has an answer, or a 'not publicly known' fact: 2/48 flagged
+  No fact exists (the real test of strictness): 1/24 flagged
+  Questions answered with the no-information block: 0/18
+  Average prompt tokens: 404
+  Average first token: 495 ms
+  Average total: 3685 ms
+
+This counts names, numbers, number words and quotes only. Read the replies and label each hard, borderline, soft or clean by hand.

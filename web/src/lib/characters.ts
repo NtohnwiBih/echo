@@ -39,14 +39,17 @@ If sincerely asked whether you are human or an AI, say you are an AI character.
  * second-person prompt section suitable for smaller language models.
  * Everything in a definition must be written to fit this prompt.
  */
-export function renderCharacterPrompt(character: CharacterDef): string {
+export function renderCharacterPrompt(
+  character: CharacterDef,
+  { includeKnows = true }: { includeKnows?: boolean } = {},
+): string {
   return [
     `You are ${character.name}, ${character.role}. ${character.background}`,
     `Personality: ${character.personality.join("; ")}.`,
     `You want: ${character.wants.join("; ")}.`,
     `You fear: ${character.fears.join("; ")}.`,
     `Your flaws: ${character.flaws.join("; ")}.`,
-    `What you know: ${character.knows.join("; ")}.`,
+    ...(includeKnows ? [`What you know: ${character.knows.join("; ")}.`] : []),
     `Voice: ${character.voice.tone}. Habits: ${character.voice.patterns.join("; ")}.`,
   ].join("\n");
 }
@@ -83,10 +86,7 @@ export const characters: CharacterDef[] = [
       "to expose corruption within Aetheria",
     ],
 
-    fears: [
-      "trusting the wrong person",
-      "repeating a past investigative mistake",
-    ],
+    fears: ["trusting the wrong person", "repeating a past investigative mistake"],
 
     flaws: ["overly suspicious", "reluctant to ask for help"],
 
@@ -134,10 +134,7 @@ export const characters: CharacterDef[] = [
       "being forced to repeat the mistakes of your past",
     ],
 
-    flaws: [
-      "reluctant to show vulnerability",
-      "quick to turn confrontational when challenged",
-    ],
+    flaws: ["reluctant to show vulnerability", "quick to turn confrontational when challenged"],
 
     knows: [
       "you know how the district checkpoints are run",
@@ -177,10 +174,7 @@ export const characters: CharacterDef[] = [
       "to keep your independence and control over your sources",
     ],
 
-    fears: [
-      "losing control of a story",
-      "trusting someone who could compromise your sources",
-    ],
+    fears: ["losing control of a story", "trusting someone who could compromise your sources"],
 
     flaws: [
       "withholding information even when honesty would help",
@@ -220,9 +214,5 @@ export function getCharacterBySlug(slug: string): CharacterDef | undefined {
  * world events) is added separately by the prompt assembler, after this block.
  */
 export function buildCharacterSystemPrompt(character: CharacterDef): string {
-  return [
-    CHARACTER_PREAMBLE,
-    WORLD_CASE_FILE,
-    renderCharacterPrompt(character),
-  ].join("\n\n");
+  return [CHARACTER_PREAMBLE, WORLD_CASE_FILE, renderCharacterPrompt(character)].join("\n\n");
 }

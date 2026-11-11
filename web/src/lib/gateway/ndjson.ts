@@ -3,9 +3,7 @@
  * Network chunks can split a line, or even a multi-byte character, so we
  * buffer until we see a full line.
  */
-export async function* readNdjson(
-  body: ReadableStream<Uint8Array>,
-): AsyncGenerator<unknown> {
+export async function* readNdjson(body: ReadableStream<Uint8Array>): AsyncGenerator<unknown> {
   const reader = body.getReader();
   const decoder = new TextDecoder();
   let buffer = "";

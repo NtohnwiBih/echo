@@ -31,14 +31,7 @@ describe("characters", () => {
       expect(c.role.trim()).not.toBe("");
       expect(c.background.trim()).not.toBe("");
       expect(c.voice.tone.trim()).not.toBe("");
-      for (const list of [
-        c.personality,
-        c.wants,
-        c.fears,
-        c.flaws,
-        c.knows,
-        c.voice.patterns,
-      ]) {
+      for (const list of [c.personality, c.wants, c.fears, c.flaws, c.knows, c.voice.patterns]) {
         expect(list.length).toBeGreaterThan(0);
         for (const item of list) expect(item.trim()).not.toBe("");
       }
@@ -66,9 +59,7 @@ describe("characters", () => {
   it("starts every system prompt with the shared preamble", () => {
     // A stable prefix lets Ollama reuse its cache between turns.
     for (const c of characters) {
-      expect(buildCharacterSystemPrompt(c).startsWith(CHARACTER_PREAMBLE)).toBe(
-        true,
-      );
+      expect(buildCharacterSystemPrompt(c).startsWith(CHARACTER_PREAMBLE)).toBe(true);
     }
   });
 
@@ -76,9 +67,7 @@ describe("characters", () => {
     for (const c of characters) {
       const prompt = buildCharacterSystemPrompt(c);
       expect(prompt).toContain(WORLD_CASE_FILE);
-      expect(prompt.indexOf(WORLD_CASE_FILE)).toBeGreaterThan(
-        prompt.indexOf(CHARACTER_PREAMBLE),
-      );
+      expect(prompt.indexOf(WORLD_CASE_FILE)).toBeGreaterThan(prompt.indexOf(CHARACTER_PREAMBLE));
     }
   });
 

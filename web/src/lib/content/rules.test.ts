@@ -19,8 +19,7 @@ function check(meta: Record<string, string>, facts: string[], path = "world/test
   return checkDoc(parseOrFail(path, makeFile(meta, facts)), { characters });
 }
 
-const errors = (issues: Issue[]) =>
-  issues.filter((i) => i.level === "error").map((i) => i.message);
+const errors = (issues: Issue[]) => issues.filter((i) => i.level === "error").map((i) => i.message);
 const warnings = (issues: Issue[]) =>
   issues.filter((i) => i.level === "warning").map((i) => i.message);
 
@@ -70,16 +69,12 @@ describe("checkDoc", () => {
 
   it("rejects a locked file that someone could state", () => {
     const meta = { ...validMeta, visibility: "locked" };
-    expect(errors(check(meta, [goodFact]))).toEqual([
-      expect.stringContaining("knownBy: none"),
-    ]);
+    expect(errors(check(meta, [goodFact]))).toEqual([expect.stringContaining("knownBy: none")]);
   });
 
   it("rejects knownBy none on a public file", () => {
     const meta = { ...validMeta, knownBy: "none" };
-    expect(errors(check(meta, [goodFact]))).toEqual([
-      expect.stringContaining("only for locked"),
-    ]);
+    expect(errors(check(meta, [goodFact]))).toEqual([expect.stringContaining("only for locked")]);
   });
 
   it("rejects an unknown character in knownBy", () => {
@@ -89,16 +84,12 @@ describe("checkDoc", () => {
 
   it("rejects knownBy self in a world file", () => {
     const meta = { ...validMeta, knownBy: "self" };
-    expect(errors(check(meta, [goodFact]))).toEqual([
-      expect.stringContaining("character file"),
-    ]);
+    expect(errors(check(meta, [goodFact]))).toEqual([expect.stringContaining("character file")]);
   });
 
   it("rejects a discover file without a source", () => {
     const meta = { ...validMeta, discover: "true" };
-    expect(errors(check(meta, [goodFact]))).toEqual([
-      expect.stringContaining("source label"),
-    ]);
+    expect(errors(check(meta, [goodFact]))).toEqual([expect.stringContaining("source label")]);
   });
 
   it("never lets a locked secret appear on Discover", () => {
@@ -109,9 +100,7 @@ describe("checkDoc", () => {
       discover: "true",
       source: "Somewhere",
     };
-    expect(errors(check(meta, [goodFact]))).toEqual([
-      expect.stringContaining("Discover"),
-    ]);
+    expect(errors(check(meta, [goodFact]))).toEqual([expect.stringContaining("Discover")]);
   });
 
   it("checks that the folder matches the scope", () => {

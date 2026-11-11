@@ -72,3 +72,21 @@ model ModelCall {
 
   @@index([task, createdAt])
 }
+
+model WorldFact {
+  hash        String                       @id
+  docId       String
+  text        String
+  scope       String
+  owner       String?
+  visibility  String
+  audience    String[]
+  reliability String
+  source      String?
+  discover    Boolean                      @default(false)
+  embedModel  String
+  embedding   Unsupported("vector(1024)")?
+  createdAt   DateTime                     @default(now())
+
+  @@index([docId])
+}

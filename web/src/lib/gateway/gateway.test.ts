@@ -1,12 +1,6 @@
 import { describe, it, expect, vi } from "vitest";
 import { createGateway } from "./gateway";
-import type {
-  CallRecord,
-  ChatChunk,
-  ChatRequest,
-  GatewayConfig,
-  ModelProvider,
-} from "./types";
+import type { CallRecord, ChatChunk, ChatRequest, GatewayConfig, ModelProvider } from "./types";
 
 const config: GatewayConfig = {
   models: { chat: "chat-model", extract: "extract-model", embed: "embed-model" },
@@ -95,7 +89,7 @@ describe("gateway.embed", () => {
       config,
     });
     await expect(gateway.embedQuery("x")).resolves.toEqual([
-        (config.embedQueryPrefix + "x").length,
+      (config.embedQueryPrefix + "x").length,
     ]);
     spy.mockRestore();
   });
@@ -131,9 +125,7 @@ describe("gateway.generate", () => {
 
   it("lets the caller override model, temperature and seed", async () => {
     const { gateway, chatRequests } = setup();
-    await collect(
-      gateway.generate({ messages, model: "m2", temperature: 0, seed: 1 }),
-    );
+    await collect(gateway.generate({ messages, model: "m2", temperature: 0, seed: 1 }));
     expect(chatRequests[0]).toMatchObject({
       model: "m2",
       temperature: 0,
