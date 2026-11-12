@@ -66,10 +66,18 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Revisit if:** the model ignores facts placed in the user turn.
 
 ## 011: Retrieval-based prompt, first end-to-end measurement
-**Evidence (llama3.1:8b, Mira, temp 0.3, 72 replies, one hand labeller):** 4 hard (5.6%, 95% interval roughly 2-13%), 7 borderline, 4 soft, 57 clean. On 6 questions with no matching fact: 1 hard in 24 (invented "Arin Vex"). Script flagged 8: 3 real, 5 false (4 x "Nine", 1 quoted reply); it missed 2 of 4 hard. Prompt 376 tokens (was 510); total 3.2 s (cached first token 470 ms flatters it). The no-information block never fired (0/18): in-world questions are always near some fact, so strictness rests on the fallback line.
-**Problems found:** invented memories ("two days since we last spoke"); prompt leakage ("the information provided"); one document's near-identical bullets crowded out Mira's own knowledge; terse, repetitive voice.
-**Changes:** explicit "nothing remembered" line, reworded fallback, max three facts per document, quote check ignores wrapped replies.
-**Caveat:** the old held-out questions are no longer held out, since content was written after they failed.
+**Evidence (llama3.1:8b, Mira, temp 0.3, 72 replies, one hand labeller):** 4 hard inventions (5.6%, 95% interval roughly 2-13%), 7 borderline, 4 soft, 57 clean. On 6 questions with no matching fact: 1 hard in 24 (an invented head of Internal Affairs). The invention script flagged 8: 3 real, 5 false; it missed 2 of the 4 hard cases. Prompt 376 tokens (was 510). The no-information block never fired (0/18): in-world questions are always near some fact, so strictness rests on the fallback line.
+**Problems found:** an invented memory ("two days since we last spoke"); prompt leakage ("the information provided"); one document's bullets crowding out Mira's own knowledge; terse, repetitive voice.
+**Changes:** explicit "nothing remembered" line, reworded fallback, at most three facts per document, quote check ignores wrapped replies.
+**Rerun (rag-v2):** [add the summary line]
+**Caveat:** the old held-out questions are no longer held out, because content was written after they failed. Parked for Phase 5: reply check, model comparison, trust gate.
+
+## 012: Streaming chat endpoint
+**Context:** A reply must stream, be saved, be logged, and not overload one laptop.
+**Decision:** `POST /api/chat` is a route handler that streams newline-delimited JSON events (queued, start, delta, done, error). One generation runs at a time through an in-process queue. An empty reply row is created first so the gateway can link its log row to it, and the final or partial text is saved in a `finally` block. Conversation ownership is checked inside the database query. The browser disconnecting aborts generation.
+**Evidence:** curl shows the full event sequence; a follow-up with the returned conversationId reuses the conversation; an unknown id returns "conversation not found" and an empty message returns "invalid request". ModelCall rows link to messages. Prompt about 400 tokens; first token 32.7 s cold (model load) and 6.0 s warm with history.
+**Open:** the 6.0 s may mean the two models evict each other (to check with `ollama ps` and `OLLAMA_MAX_LOADED_MODELS`). Queue, abort and 404 status checks still to confirm.
+**Revisit if:** more than a handful of simultaneous users, or the queue moves to Temporal.
 
 ---
 
