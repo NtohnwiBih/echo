@@ -258,7 +258,7 @@ Summary
   No fact exists (the real test of strictness): 1/24 flagged
   Questions answered with the no-information block: 0/18
   Average prompt tokens: 404
-  Average first token: 495 ms
-  Average total: 3685 ms
+  Average first token: 511 ms
+  Average total: 3732 ms
 
 This counts names, numbers, number words and quotes only. Read the replies and label each hard, borderline, soft or clean by hand.
