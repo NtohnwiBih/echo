@@ -4,9 +4,10 @@ import { loadHistory, resolveConversation } from "@/lib/chat/conversations";
 import { encodeEvent, type ChatEvent } from "@/lib/chat/events";
 import { chatQueue, gateway } from "@/lib/chat/instances";
 import { getCharacterBySlug } from "@/lib/characters";
-import { DEFAULT_RETRIEVAL, retrieveFacts } from "@/lib/content/retrieve";
+import { retrieveFacts } from "@/lib/content/retrieve";
 import { prisma } from "@/lib/prisma";
 import { buildMessages } from "@/lib/prompt";
+import { buildSceneNotes, detectStance } from "@/lib/chat/stance";
 
 const bodySchema = z.object({
   character: z.string().min(1),
@@ -57,12 +58,11 @@ export async function POST(request: Request) {
 
       try {
         await chatQueue.run(async () => {
-          const facts = await retrieveFacts({
+          const { world, persona } = await retrieveFacts({
             prisma,
             gateway,
             character: slug,
             question: message,
-            options: DEFAULT_RETRIEVAL,
           });
 
           const assistant = await prisma.message.create({
@@ -75,7 +75,9 @@ export async function POST(request: Request) {
             for await (const piece of gateway.generate({
               messages: buildMessages({
                 character,
-                facts,
+                facts: world,
+                persona,
+                sceneNotes: buildSceneNotes({ stance: detectStance(message) }),
                 history,
                 userMessage: message,
               }),

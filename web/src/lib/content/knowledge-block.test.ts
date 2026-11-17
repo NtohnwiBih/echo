@@ -19,7 +19,7 @@ describe("buildKnowledgeBlock", () => {
   it("says plainly that the character knows nothing when there are no facts", () => {
     const block = buildKnowledgeBlock([]);
     expect(block).toBe(NO_INFORMATION_BLOCK);
-    expect(block).toContain("no information");
+    expect(block).toContain("do not know");
   });
 
   it("starts with the heading the shared rules refer to", () => {
@@ -44,5 +44,15 @@ describe("buildKnowledgeBlock", () => {
   it("tells the character what to do when the facts do not answer the question", () => {
     const block = buildKnowledgeBlock([fact("A fact.", "confirmed")]);
     expect(block.endsWith(FALLBACK_LINE)).toBe(true);
+  });
+
+  it("adds an About you section for facts about the character", () => {
+    const block = buildKnowledgeBlock([], [fact("Mira drinks strong black tea.", "confirmed")]);
+    expect(block).toContain("About you");
+    expect(block).toContain("- Mira drinks strong black tea.");
+  });
+
+  it("leaves out the About you section when there are none", () => {
+    expect(buildKnowledgeBlock([fact("A.", "confirmed")])).not.toContain("About you");
   });
 });

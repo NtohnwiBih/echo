@@ -13,22 +13,24 @@ export function encodeEvent(event: ChatEvent): Uint8Array {
   return encoder.encode(`${JSON.stringify(event)}\n`);
 }
 
+/** True when a parsed value has the shape of a chat event. */
+export function isChatEvent(value: unknown): value is ChatEvent {
+  return (
+    typeof value === "object" &&
+    value !== null &&
+    "type" in value &&
+    EVENT_TYPES.has(String(value.type))
+  );
+}
+
 /** Reads one line back into an event, or null if it is blank or not an event. */
 export function parseEventLine(line: string): ChatEvent | null {
   const trimmed = line.trim();
   if (!trimmed) return null;
   try {
     const value: unknown = JSON.parse(trimmed);
-    if (
-      typeof value === "object" &&
-      value !== null &&
-      "type" in value &&
-      EVENT_TYPES.has(String(value.type))
-    ) {
-      return value as ChatEvent;
-    }
+    return isChatEvent(value) ? value : null;
   } catch {
-    // not JSON: treat it as noise
+    return null; // not JSON: treat it as noise
   }
-  return null;
 }

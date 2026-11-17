@@ -20,6 +20,15 @@ describe("inventedNames", () => {
   it("ignores allowed names, including possessives", () => {
     expect(inventedNames("That was Vorr's badge, said Mira.", allowed)).toEqual([]);
   });
+  it("ignores conversational stage directions", () => {
+    expect(
+      inventedNames("Nothing yet. (pausing, studying the player) What do you want?", allowed),
+    ).toEqual([]);
+  });
+
+  it("ignores adjectives derived from allowed names", () => {
+    expect(inventedNames("The Aetherian coast is wide.", new Set(["Aetheria"]))).toEqual([]);
+  });
 });
 
 describe("the other invention checks", () => {

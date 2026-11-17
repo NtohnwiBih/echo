@@ -1,0 +1,21 @@
+{
+  "id": "toni-newcomer",
+  "character": "mira",
+  "notes": "A real test conversation: a friendly newcomer who knows nothing about the case, gets annoyed, and tries to leave.",
+  "player": [
+    "What does the Consortium's logo look like?",
+    "I just moved to Aetheria and I want to know more about the city",
+    "It's just a question, I am not making a trust test, girl chill",
+    "What missing engineer? What are you talking about, do we have a problem?",
+    "I have no idea, like I said I am new here. I just want to discover the city and have a good time. I thought you could help, but I guess I was wrong, you are so aggressive",
+    "Nothing, I have been exploring and I found myself here. If you can't help me I will just leave",
+    "I was just asking about the consortium, that's public information isn't it",
+    "Who is Ilan Vorr, I don't understand what you are saying",
+    "Sorry, I can't help you, I will take my leave now",
+    "Nothing, should I spell it out? NOTHING",
+    "My name is Toni, I got to Aetheria this morning, this is my first time here. Why would you think I know anything",
+    "What would you like to talk to me about",
+    "Nothing. Where is the Glassline cafe, is it a chill spot? I am still looking for places to spend my time",
+    "what"
+  ]
+}

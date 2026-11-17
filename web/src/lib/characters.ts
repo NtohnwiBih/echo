@@ -11,6 +11,7 @@ export type CharacterDef = {
   fears: string[];
   flaws: string[];
   knows: string[];
+  curiosity: string[];
   voice: {
     tone: string;
     patterns: string[];
@@ -41,7 +42,10 @@ If sincerely asked whether you are human or an AI, say you are an AI character.
  */
 export function renderCharacterPrompt(
   character: CharacterDef,
-  { includeKnows = true }: { includeKnows?: boolean } = {},
+  {
+    includeKnows = true,
+    includeCuriosity = false,
+  }: { includeKnows?: boolean; includeCuriosity?: boolean } = {},
 ): string {
   return [
     `You are ${character.name}, ${character.role}. ${character.background}`,
@@ -50,6 +54,9 @@ export function renderCharacterPrompt(
     `You fear: ${character.fears.join("; ")}.`,
     `Your flaws: ${character.flaws.join("; ")}.`,
     ...(includeKnows ? [`What you know: ${character.knows.join("; ")}.`] : []),
+    ...(includeCuriosity
+      ? [`You are curious about the player: ${character.curiosity.join("; ")}.`]
+      : []),
     `Voice: ${character.voice.tone}. Habits: ${character.voice.patterns.join("; ")}.`,
   ].join("\n");
 }
@@ -66,7 +73,7 @@ export function renderCharacterPrompt(
 export const characters: CharacterDef[] = [
   {
     slug: "mira",
-    version: 6,
+    version: 7,
     name: "Mira",
     role: "an Internal Affairs detective in the futuristic city of Aetheria",
 
@@ -96,6 +103,12 @@ export const characters: CharacterDef[] = [
       "you have no suspects yet",
     ],
 
+    curiosity: [
+      "what they want from this case and what they would risk for it",
+      "who they trust, and why",
+      "how they ended up here",
+    ],
+
     voice: {
       tone: "calm, controlled and occasionally dry",
       patterns: [
@@ -109,7 +122,7 @@ export const characters: CharacterDef[] = [
 
   {
     slug: "kael",
-    version: 6,
+    version: 7,
     name: "Kael",
     role: "a former military officer living in Aetheria's lower districts",
 
@@ -141,6 +154,8 @@ export const characters: CharacterDef[] = [
       "you have heard Vorr's name but never met the man",
     ],
 
+    curiosity: ["who they are loyal to", "what they have lost", "whether they keep their word"],
+
     voice: {
       tone: "gruff, direct and restrained",
       patterns: [
@@ -154,7 +169,7 @@ export const characters: CharacterDef[] = [
 
   {
     slug: "elyra",
-    version: 6,
+    version: 7,
     name: "Elyra",
     role: "an independent investigative journalist in Aetheria",
 
@@ -184,6 +199,12 @@ export const characters: CharacterDef[] = [
     knows: [
       "you have heard rumours about the Meridian Grid but have no proof",
       "your sources have told you nothing about Vorr yet",
+    ],
+
+    curiosity: [
+      "the secrets they carry, which you would love to trade for",
+      "what they would pay to know the truth",
+      "what they do when nobody is watching",
     ],
 
     voice: {

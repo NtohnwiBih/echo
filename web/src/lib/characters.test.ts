@@ -31,7 +31,15 @@ describe("characters", () => {
       expect(c.role.trim()).not.toBe("");
       expect(c.background.trim()).not.toBe("");
       expect(c.voice.tone.trim()).not.toBe("");
-      for (const list of [c.personality, c.wants, c.fears, c.flaws, c.knows, c.voice.patterns]) {
+      for (const list of [
+        c.personality,
+        c.wants,
+        c.fears,
+        c.flaws,
+        c.knows,
+        c.curiosity,
+        c.voice.patterns,
+      ]) {
         expect(list.length).toBeGreaterThan(0);
         for (const item of list) expect(item.trim()).not.toBe("");
       }
@@ -87,5 +95,13 @@ describe("characters", () => {
   it("finds a character by slug", () => {
     expect(getCharacterBySlug("mira")?.name).toBe("Mira");
     expect(getCharacterBySlug("nobody")).toBeUndefined();
+  });
+
+  it("writes the curiosity line in second person too", () => {
+    for (const c of characters) {
+      const prompt = renderCharacterPrompt(c, { includeCuriosity: true });
+      expect(prompt).toContain("curious about the player");
+      expect(prompt).not.toMatch(/\b(he|she|his|her|him)\b/i);
+    }
   });
 });

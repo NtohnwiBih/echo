@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { buildCharacterSystemPrompt, characters, renderCharacterPrompt } from "./characters";
+import { characters, renderCharacterPrompt } from "./characters";
 import { FALLBACK_LINE, NO_INFORMATION_BLOCK } from "./content/knowledge-block";
 import type { RetrievedFact } from "./content/retrieve";
 import { RAG_PREAMBLE, buildMessages, buildStableSystemPrompt } from "./prompt";
@@ -29,14 +29,18 @@ describe("buildStableSystemPrompt", () => {
     expect(renderCharacterPrompt(mira, { includeKnows: false })).not.toContain(mira.knows[0]);
   });
 
-  it("is shorter than the old prompt that carried the world file", () => {
-    expect(buildStableSystemPrompt(mira).length).toBeLessThan(
-      buildCharacterSystemPrompt(mira).length,
-    );
+  it("keeps the stable prompt within the token budget", () => {
+    // Estimated tokens (chars / 4). Cached after the first turn, so it costs
+    // about seven seconds of prompt processing once per model load.
+    expect(Math.ceil(buildStableSystemPrompt(mira).length / 4)).toBeLessThan(700);
   });
 
   it("names the section that holds the retrieved facts", () => {
     expect(RAG_PREAMBLE).toContain("What you know about this question");
+  });
+
+  it("uses a custom preamble when one is given", () => {
+    expect(buildStableSystemPrompt(mira, "CUSTOM RULES").startsWith("CUSTOM RULES")).toBe(true);
   });
 });
 
@@ -79,5 +83,32 @@ describe("buildMessages", () => {
     expect(messages).toHaveLength(4);
     expect(messages[1]).toEqual(history[0]);
     expect(messages[2]).toEqual(history[1]);
+  });
+
+  it("includes facts about the character when they are given", () => {
+    const messages = buildMessages({
+      character: mira,
+      facts: [],
+      persona: [fact("Mira has never owned an umbrella.")],
+      userMessage: "Hi",
+    });
+    expect(messages[messages.length - 1].content).toContain("About you");
+  });
+
+  it("adds scene notes next to the player's words", () => {
+    const messages = buildMessages({
+      character: mira,
+      facts: [],
+      sceneNotes: ["The player wants to leave."],
+      userMessage: "Bye",
+    });
+    const last = messages[messages.length - 1].content;
+    expect(last).toContain("Scene notes:\n- The player wants to leave.");
+    expect(last.endsWith("The player says: Bye")).toBe(true);
+  });
+
+  it("leaves out the scene notes section when there are none", () => {
+    const messages = buildMessages({ character: mira, facts: [], userMessage: "Hi" });
+    expect(messages[messages.length - 1].content).not.toContain("Scene notes");
   });
 });

@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { pickFacts, type RetrievedFact } from "./retrieve";
+import { pickFacts, splitFacts, type RetrievedFact } from "./retrieve";
 
 function fact(text: string, score: number): RetrievedFact {
   return {
@@ -51,5 +51,14 @@ describe("pickFacts", () => {
     const other = { ...fact("other", 0.6), docId: "doc-b" };
     const kept = pickFacts([...same, other], { limit: 5, minScore: 0.5, maxPerDoc: 2 });
     expect(kept.map((f) => f.text)).toEqual(["f0.9", "f0.8", "other"]);
+  });
+
+  it("splits facts into the character's own and the world's", () => {
+    const own = { ...fact("own", 0.6), owner: "mira" };
+    const world = { ...fact("world", 0.7), owner: null };
+    const other = { ...fact("other", 0.8), owner: "kael" };
+    const split = splitFacts([own, world, other], "mira");
+    expect(split.persona.map((f) => f.text)).toEqual(["own"]);
+    expect(split.world.map((f) => f.text)).toEqual(["other", "world"]);
   });
 });

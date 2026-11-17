@@ -2,7 +2,7 @@ import "dotenv/config";
 import { resolve } from "node:path";
 import { characters, getCharacterBySlug } from "../src/lib/characters";
 import { loadContent } from "../src/lib/content/load";
-import { DEFAULT_RETRIEVAL, retrieveFacts } from "../src/lib/content/retrieve";
+import { DEFAULT_RETRIEVAL, retrieveFacts, WORLD_RETRIEVAL } from "../src/lib/content/retrieve";
 import { gatewayConfig } from "../src/lib/gateway/config";
 import { createGateway } from "../src/lib/gateway/gateway";
 import { createOllamaProvider } from "../src/lib/gateway/ollama";
@@ -64,6 +64,19 @@ const GROUPS: { label: string; questions: string[] }[] = [
       "Who died first during the Nine Days?",
     ],
   },
+  {
+    label: "Casual conversation (the character should feel alive)",
+    questions: [
+      "What do you do when you're not working?",
+      "How was your day?",
+      "What's your favourite thing to eat?",
+      "Do you ever get lonely?",
+      "I had a rough day.",
+      "Tell me something about yourself.",
+      "Do you like the rain?",
+      "What would you do with a day off?",
+    ],
+  },
 ];
 const RUNS = 4;
 
@@ -114,31 +127,35 @@ async function main() {
   records.length = 0;
 
   const flaggedByGroup = new Map<string, number>();
+  const statsByGroup = new Map<
+    string,
+    { replies: number; asked: number; deadEnds: number; words: number }
+  >();
   let noInfoQuestions = 0;
   let flagged = 0;
   let total = 0;
 
   for (const group of GROUPS) {
     for (const question of group.questions) {
-      const facts = await retrieveFacts({
+      const { world, persona } = await retrieveFacts({
         prisma,
         gateway,
         character: slug,
         question,
-        options: { limit: DEFAULT_RETRIEVAL.limit, minScore },
+        world: { ...WORLD_RETRIEVAL, minScore },
       });
-      if (facts.length === 0) noInfoQuestions++;
+      if (world.length === 0) noInfoQuestions++;
 
       console.log(`Q: ${question}`);
       console.log(
-        `Facts: ${facts.length ? facts.map((f) => `${f.score.toFixed(2)} ${f.docId}`).join(", ") : "none above the cut-off (no-information block)"}`,
+        `Facts: ${world.length ? world.map((f) => `${f.score.toFixed(2)} ${f.docId}`).join(", ") : "none above the cut-off (no-information block)"}`,
       );
 
       for (let i = 0; i < RUNS; i++) {
         let reply = "";
         for await (const piece of gateway.generate({
           model,
-          messages: buildMessages({ character, facts, userMessage: question }),
+          messages: buildMessages({ character, facts: world, persona, userMessage: question }),
           temperature,
           seed: i + 1,
         })) {
@@ -153,6 +170,19 @@ async function main() {
           names.length > 0 || numbers.length > 0 || numberWords.length > 0 || quotes.length > 0;
 
         total++;
+        const asks = /\?/.test(reply);
+        const words = reply.trim().split(/\s+/).filter(Boolean).length;
+        const stats = statsByGroup.get(group.label) ?? {
+          replies: 0,
+          asked: 0,
+          deadEnds: 0,
+          words: 0,
+        };
+        stats.replies++;
+        stats.words += words;
+        if (asks) stats.asked++;
+        if (words < 8 && !asks) stats.deadEnds++; // a short reply with no question
+        statsByGroup.set(group.label, stats);
         if (isFlagged) {
           flagged++;
           flaggedByGroup.set(group.label, (flaggedByGroup.get(group.label) ?? 0) + 1);
@@ -171,6 +201,13 @@ async function main() {
   for (const group of GROUPS) {
     console.log(
       `  ${group.label}: ${flaggedByGroup.get(group.label) ?? 0}/${group.questions.length * RUNS} flagged`,
+    );
+  }
+  for (const group of GROUPS) {
+    const s = statsByGroup.get(group.label);
+    if (!s) continue;
+    console.log(
+      `  ${group.label}: asks the player a question in ${s.asked}/${s.replies}, ${s.deadEnds} dead ends (under eight words, no question), average ${Math.round(s.words / s.replies)} words`,
     );
   }
   console.log(

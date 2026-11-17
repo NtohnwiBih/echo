@@ -1,10 +1,28 @@
-/** Capitalised words that are not the first word of a sentence and not in the allowed set. */
+/** Removes *actions* and (stage directions): they are not speech and they hide where sentences start. */
+function withoutStageDirections(text: string): string {
+  return text.replace(/\*[^*\n]+\*/g, " ").replace(/\([^()\n]*\)/g, " ");
+}
+
+/** True if the word is allowed, or a form of an allowed name (Aetherian from Aetheria). */
+function isAllowedName(word: string, allowed: Set<string>): boolean {
+  if (allowed.has(word)) return true;
+  for (const name of allowed) {
+    if (name.length >= 5 && word.length >= 5 && (word.startsWith(name) || name.startsWith(word))) {
+      return true;
+    }
+  }
+  return false;
+}
+
+/** Capitalised words that are not the first word of a sentence and not allowed. */
 export function inventedNames(text: string, allowed: Set<string>): string[] {
   const out: string[] = [];
-  for (const sentence of text.split(/(?<=[.!?])\s+/)) {
+  for (const sentence of withoutStageDirections(text)
+    .trim()
+    .split(/(?<=[.!?])\s+/)) {
     for (const word of sentence.split(/\s+/).slice(1)) {
       const clean = word.replace(/'s$/, "").replace(/[^A-Za-z']/g, "");
-      if (/^[A-Z][a-z]+$/.test(clean) && !allowed.has(clean)) out.push(clean);
+      if (/^[A-Z][a-z]+$/.test(clean) && !isAllowedName(clean, allowed)) out.push(clean);
     }
   }
   return out;

@@ -14,16 +14,16 @@ export type RetrievedFact = {
 };
 
 export type RetrievalOptions = {
-  limit: number;
-  minScore: number;
+  limit: number; // the most facts to keep
+  minScore: number; // facts scoring below this count as "not relevant"
   maxPerDoc?: number; // at most this many facts from one document
 };
 
-export const DEFAULT_RETRIEVAL: RetrievalOptions = {
-  limit: 5,
-  minScore: 0.4,
-  maxPerDoc: 3,
-};
+// Provisional: the probe and the rag check show where the real cut-offs belong.
+export const WORLD_RETRIEVAL: RetrievalOptions = { limit: 5, minScore: 0.4, maxPerDoc: 3 };
+export const PERSONA_RETRIEVAL: RetrievalOptions = { limit: 3, minScore: 0.35, maxPerDoc: 2 };
+/** Kept so older scripts still compile. */
+export const DEFAULT_RETRIEVAL = WORLD_RETRIEVAL;
 
 type SearchArgs = {
   prisma: PrismaClient;
@@ -34,16 +34,16 @@ type SearchArgs = {
 };
 
 /**
- * Finds the facts this character may state that are closest in meaning to the
- * question. The permission check happens here, in SQL. The cut-off is a
- * separate step (pickFacts), so the probe can look at the raw scores.
+ * Finds the facts this character may state, closest in meaning to the question.
+ * The permission check happens here, in SQL. The cut-offs are applied later,
+ * so the probe can look at the raw scores.
  */
 export async function searchFacts({
   prisma,
   gateway,
   character,
   question,
-  candidates = 12,
+  candidates = 200,
 }: SearchArgs): Promise<RetrievedFact[]> {
   const literal = toVectorLiteral(await gateway.embedQuery(question));
 
@@ -73,7 +73,7 @@ export function pickFacts(
 
   for (const fact of ranked) {
     const used = perDoc.get(fact.docId) ?? 0;
-    if (used >= maxPerDoc) continue; // this document already has its share
+    if (used >= maxPerDoc) continue;
     perDoc.set(fact.docId, used + 1);
     kept.push(fact);
     if (kept.length === limit) break;
@@ -81,10 +81,31 @@ export function pickFacts(
   return kept;
 }
 
-/** Search, then apply the cut-off. This is what the chat endpoint will call. */
+export type Retrieved = { world: RetrievedFact[]; persona: RetrievedFact[] };
+
+/** Facts from the character's own files are about them. Everything else is about the world. */
+export function splitFacts(
+  candidates: RetrievedFact[],
+  character: string,
+  world: RetrievalOptions = WORLD_RETRIEVAL,
+  persona: RetrievalOptions = PERSONA_RETRIEVAL,
+): Retrieved {
+  return {
+    world: pickFacts(
+      candidates.filter((f) => f.owner !== character),
+      world,
+    ),
+    persona: pickFacts(
+      candidates.filter((f) => f.owner === character),
+      persona,
+    ),
+  };
+}
+
+/** Search once, then split into world facts and facts about the character. */
 export async function retrieveFacts(
-  args: SearchArgs & { options?: RetrievalOptions },
-): Promise<RetrievedFact[]> {
+  args: SearchArgs & { world?: RetrievalOptions; persona?: RetrievalOptions },
+): Promise<Retrieved> {
   const found = await searchFacts(args);
-  return pickFacts(found, args.options ?? DEFAULT_RETRIEVAL);
+  return splitFacts(found, args.character, args.world, args.persona);
 }
