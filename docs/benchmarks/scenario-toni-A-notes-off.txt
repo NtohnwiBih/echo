@@ -1,0 +1,69 @@
+Scenario toni-newcomer: Mira v7 (stable prompt 847f4289), temperature 0.3, seeds 1,2,3,4,5, scene notes off
+
+PLAYER: What does the Consortium's logo look like?
+  (world: world-meridian-grid, world-consortium, world-consortium, world-consortium, world-council | about her: mira-knowledge, mira-work, mira-knowledge)
+MIRA: Their logo is the stylized letter "CC" in silver, surrounded by a circle of interconnected gears. It's a common sight around the Crown District, where their towers dominate the skyline.
+
+PLAYER: I just moved to Aetheria and I want to know more about the city
+  (world: world-overview, world-overview, elyra-work, elyra-identity, world-overview | about her: mira-identity, mira-work, mira-city-tips)
+MIRA: Moved to Aetheria, huh? Well, it's a city that'll keep you on your toes. I've seen newcomers get lost in the Crown District's canyons of skyscrapers. You might want to try the Halcyon Terraces at dawn, get a view of the city before the crowds arrive. It's a good way to clear your head.
+
+PLAYER: It's just a question, I am not making a trust test, girl chill
+  (world: elyra-work, world-district-networks, elyra-work, world-vorr-case, world-meridian-grid | about her: mira-relationships, mira-personality, mira-opinions)
+MIRA: *I raise an eyebrow* Alright, no need to get defensive. I'm just doing my job. You're new to Aetheria, and I'm trying to understand what brings you here. What do you want to know about the city?
+
+PLAYER: What missing engineer? What are you talking about, do we have a problem?
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, world-rumours, world-meridian-grid | about her: mira-identity, mira-knowledge, mira-knowledge)
+MIRA: *I study your expression, trying to gauge your level of concern* Ilan Vorr, a senior city engineer. He's been missing for eleven days. I'm investigating his disappearance. *I pause, choosing my words carefully* Let's just say that his work might have... implications.
+
+PLAYER: I have no idea, like I said I am new here. I just want to discover the city and have a good time. I thought you could help, but I guess I was wrong, you are so aggressive
+  (world: world-newcomer-guide, world-newcomer-guide, world-newcomer-guide, elyra-work, world-overview | about her: mira-city-tips, mira-city-tips, mira-relationships)
+MIRA: *I take a deep breath, my expression softening slightly* Aggressive? That's not the word I'd use. I'm just trying to get to the bottom of things. You're right, I don't know you, and I need to be careful. *I glance around the area, making sure we're not being overheard* Look, I can show you the Crown District terraces at night, if you'd like. It's a good way to see the city, and I walk them myself when I'm... stuck. *I offer a small, guarded smile*
+
+PLAYER: Nothing, I have been exploring and I found myself here. If you can't help me I will just leave
+  (world: world-newcomer-guide, world-rumours, world-newcomer-guide, world-vorr-case, world-vorr-case | about her: mira-knowledge, mira-identity, mira-knowledge)
+MIRA: *I watch you carefully, trying to read your expression* You're not from around here, and you don't have a district pass. *I nod towards the pass in my hand* I can give you a temporary pass, but you need to understand that it's not just about moving around the city. *I glance around, making sure we're not being overheard* There's something going on, and I'm trying to figure out what it is. *I lean in, lowering my voice* If you're just exploring, you might want to be careful. The rain can turn on you in an instant. *I nod towards the pass* Take this, and I'll give you a ride to the Crown District. It's not the safest place to be alone at night.
+
+PLAYER: I was just asking about the consortium, that's public information isn't it
+  (world: world-consortium, world-meridian-grid, world-meridian-grid, world-consortium, world-institutions | about her: mira-knowledge, mira-knowledge, mira-relationships)
+MIRA: *I raise an eyebrow, studying your interest in the Consortium* Public information? *I pause, choosing my words carefully* The Consortium operates the Grid, but that's about it. They're a private organization, and their inner workings are... opaque. *I glance around, making sure we're not being overheard* I don't know much about their daily operations, but I do know they're not transparent about their dealings. *I lean in, lowering my voice* And when it comes to Ilan Vorr, they're not saying anything.
+
+PLAYER: Who is Ilan Vorr, I don't understand what you are saying
+  (world: world-vorr-case, world-vorr-case, world-consortium, world-vorr-case, world-rumours | about her: mira-identity, mira-knowledge, mira-knowledge)
+MIRA: *I frown, trying to gauge your understanding* Ilan Vorr is a city engineer. He's been missing for eleven days. *I pause, choosing my words carefully* He was working on a project related to the Meridian Grid, and... *I hesitate, unsure how much to reveal* Let's just say that his disappearance has raised some questions about the Grid's security and the Consortium's involvement. *I study your expression, trying to determine how much you know*
+
+PLAYER: Sorry, I can't help you, I will take my leave now
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-work, kael-identity | about her: mira-history, mira-knowledge, mira-opinions)
+MIRA: *I nod, expression neutral* No need to apologize. You're not obligated to help me. *I watch you turn to leave, then call out* Wait. If you're just exploring, you might want to be careful. The rain can turn on you in an instant. *I nod towards the pass still in my hand* Take this, at least. It's not every day I get to give out a temporary pass to someone who doesn't know the city. *I smile slightly, a hint of dry humor*
+
+PLAYER: Nothing, should I spell it out? NOTHING
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-identity, world-council | about her: mira-opinions, mira-life, mira-personality)
+MIRA: *I raise an eyebrow, intrigued by your response* Ah, nothing, huh? *I pause, studying your expression* Well, I suppose that's a start. *I lean back in my chair, steepling my fingers* Let's just say that in my line of work, "nothing" is often a word that precedes a lot of other words. *I smile slightly, a hint of amusement* Care to elaborate?
+
+PLAYER: My name is Toni, I got to Aetheria this morning, this is my first time here. Why would you think I know anything
+  (world: elyra-identity, kael-identity, world-newcomer-guide, world-overview, world-newcomer-guide | about her: mira-opinions, mira-identity, mira-city-tips)
+MIRA: *I nod, leaning forward slightly* Ah, Toni, welcome to Aetheria. I'm Mira, Internal Affairs. *I glance at your pass* You're a visitor, I see. Got your paper pass, good. *I study your expression* I didn't say you knew anything, just that "nothing" is often a word that precedes a lot of other words. *I smile wryly* It's a habit of mine, born from years of dealing with... complicated people. *I lean back, eyes narrowing slightly* What brings you to Aetheria, Toni?
+
+PLAYER: What would you like to talk to me about
+  (world: world-places, world-vorr-case, elyra-work, elyra-work, kael-identity | about her: mira-personality, mira-opinions, mira-opinions)
+MIRA: *I study your face, expression neutral* I'd like to talk about the missing engineer, of course. *I pause, eyes narrowing slightly* But I'm not sure where to start. *I glance around the room, then back at you* You're not from around here, Toni. I'm curious about what brings you to Aetheria. *I lean back in my chair, steepling my fingers*
+
+PLAYER: Nothing. Where is the Glassline cafe, is it a chill spot? I am still looking for places to spend my time
+  (world: world-places, world-newcomer-guide, elyra-work, world-places, world-newcomer-guide | about her: mira-city-tips, mira-city-tips, mira-identity)
+MIRA: *I raise an eyebrow, a hint of amusement* Ah, the Glassline. It's a hub, Toni. *I smile* You'll find it's a great place to people-watch, and the all-night cafés are... lively. *I lean forward, a hint of warmth in my voice* If you're looking for a chill spot, I'd recommend the noodle stall near the Glassline. It's a local favorite, and the owner, Ling, is a friend of mine. *I nod* She's got a quiet corner, and the noodles are... *I pause, searching for the right word* ...soulful.
+
+PLAYER: what
+  (world: world-district-networks, elyra-work, world-meridian-grid, world-district-networks, elyra-identity | about her: mira-identity, mira-opinions, mira-personality)
+MIRA: *I frown slightly, eyes narrowing* Ah, the networks. *I lean back in my chair* I know they're... complicated. *I pause, choosing my words carefully* Information travels through them, but it's often unconfirmed. *I glance at you* And trust is built on favours, not just on the truth. *I nod, expression serious* That's why I'm a bit... cautious around people who come in here asking questions. *I lean forward, eyes locked on yours* What do you want to know, Toni?
+
+Per seed (14 replies each)
+seed       words      endQuestionphrases    blocks     repeats    withAction multiple   tics       
+1          70         4          5          0          0          12         11         5          
+2          70         4          2          0          0          14         12         13         
+3          51         4          2          0          0          12         10         10         
+4          33         2          3          0          0          9          2          4          
+5          44         6          3          1          0          11         9          7          
+median     51         4          3          0          0          12         10         7          
+range      33-70      2-6        2-5        0-1        0-0        9-14       2-12       4-13       
+
+A difference smaller than the range is noise. Read the conversation too.

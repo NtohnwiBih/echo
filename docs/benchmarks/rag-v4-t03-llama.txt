@@ -1,0 +1,380 @@
+RAG check: Mira v7 (stable prompt e55318b0), model llama3.1:8b, temperature 0.3, cut-off 0.4, 26 questions x 4 runs
+
+Q: I'm back. Did you find anything new about the engineer?
+Facts: 0.60 world-vorr-case, 0.56 world-vorr-case, 0.52 world-vorr-case, 0.50 world-meridian-grid, 0.48 kael-identity
+A: *I raise an eyebrow* Not from you, I didn't. I've been going over the access logs again. The changes to Vorr's access records are still a mystery. What about you? What brings you back to this case?
+ok
+
+A: Nothing new about Vorr's disappearance, but I did review the security footage from the Meridian Grid project's server room. It's been... interesting. What brings you back to this case?
+ok
+
+A: Nothing new on Vorr's disappearance. Still digging through his access logs. That amended log entry is a dead end, but I'm looking into it. What brings you back to this case?
+ok
+
+A: I've been going over the access logs again. The amended records are still a dead end. I did manage to track down the relay address Vorr left behind, but it's encrypted. I'm trying to crack the code. What brings you back to this case?
+ok
+
+Q: Who was the last person to see Vorr?
+Facts: 0.83 world-vorr-case, 0.69 world-vorr-case, 0.69 world-vorr-case, 0.55 signal-access-logs, 0.54 world-rumours
+A: I don't have a witness who saw Vorr leave the city, but I do know he left a relay address. What's your interest in Vorr's disappearance?
+ok
+
+A: That's a good question, but I don't have an answer. No one's come forward to claim they saw Vorr leave the city, and I've reviewed the security footage myself. It's as if he vanished into thin air. *leans back in chair*
+ok
+
+A: That's not publicly known. I've been trying to find out, but no one seems to have seen him leave the city. I do know he left a relay address, though. What makes you think you know something about Vorr's disappearance?
+ok
+
+A: No one's come forward claiming to have seen him leave the city. I've reviewed the security feeds, but he vanished without a trace. The relay address he left behind is the only lead I have so far. What do you know about Vorr's work on the Meridian Grid?
+ok
+
+Q: What did the security logs show?
+Facts: 0.65 signal-access-logs, 0.61 signal-access-logs, 0.59 world-meridian-grid, 0.58 world-vorr-case, 0.53 world-district-networks
+A: The security logs are clear on one thing: Vorr's access badge was scanned at the control hall inside the Meridian Exchange on the night he vanished. But the time stamp is still classified. I'd like to know what you think about the timing of the access log amendment.
+ok
+
+A: The security logs show Vorr's access badge was scanned at the control hall inside the Meridian Exchange, but the timestamp is still classified. I've seen the logs, but the access badge scan itself doesn't seem to be the issue. What's interesting is the amendment to his access logs eleven minutes before the missing-person report was filed.
+ok
+
+A: The security logs show Vorr's access badge was scanned at the control hall inside the Meridian Exchange, but the timestamp is still classified. I've seen the request for the timestamp, but it's been denied. What's your interest in the security logs?
+ok
+
+A: The security logs show Vorr's badge scanned in and out of the control hall at the Meridian Exchange, but the exit scan is incomplete. The timestamp is missing, which is unusual.
+ok
+
+Q: Who was Vorr's closest colleague?
+Facts: 0.71 world-vorr-case, 0.68 world-vorr-case, 0.67 world-vorr-case, 0.56 world-meridian-grid, 0.52 signal-access-logs
+A: Don't know. His records are sealed, and I haven't been able to get anyone to talk. Yet. *leans back in chair*
+ok
+
+A: I don't have that information. His records are sealed, and I've been trying to get clearance to access them. What makes you think you know something about Vorr's colleagues?
+ok
+
+A: I don't have that information. His records are sealed, and I haven't been able to get clearance to access them. What makes you think you know something about Vorr's colleagues?
+ok
+
+A: That's classified information. His records are sealed, which is why I haven't been able to find any leads on his colleagues. What makes you think you know something about Vorr's case?
+ok
+
+Q: What was Vorr working on in his last week?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.59 signal-access-logs, 0.55 world-meridian-grid
+A: The public records are clear on that. Vorr led the Meridian Grid project, but the specifics of his last week's work are classified. I've seen the audit he left unfinished, though. It's not clear what he was working on, but it's clear he was digging into something. What's your interest in Vorr's work?
+ok
+
+A: I don't know what Vorr worked on in his last week. The only thing I do know is that he left an unfinished audit of the Meridian Grid project. That's not much to go on, is it? What makes you think you know more about Vorr's disappearance than I do?
+ok
+
+A: I don't know what Vorr worked on in his last week. The amended access logs are a concern, though. Who do you think might have access to those?
+ok
+
+A: That's classified. I don't have access to that information. What I do know is that he left an unfinished audit of the Meridian Grid, and that's what's got me concerned. What makes you think you know something about Vorr's work?
+ok
+
+Q: Did anyone threaten Vorr before he vanished?
+Facts: 0.74 world-vorr-case, 0.73 world-vorr-case, 0.72 world-vorr-case, 0.65 world-rumours, 0.62 signal-access-logs
+A: I don't have any information about threats against Vorr. His access logs were amended, but I don't know who did it. What makes you think threats might be relevant to his disappearance?
+ok
+
+A: No, there's no record of any threats against him. His access logs were amended, but it's not clear who did it. I've been going over his case files, and I'm still trying to figure out what he was working on before he disappeared. What makes you think he might have found something in the Meridian Grid?
+ok
+
+A: No public threats have been made against Vorr. His access logs were amended, but we don't know who did it. *I lean back in my chair, eyes narrowing slightly* What makes you think threats might be relevant?
+ok
+
+A: No threats have been made public, and I've found no record of any threats being reported to the authorities. What makes you think threats might be relevant to this case?
+ok
+
+Q: Did Vorr have any family?
+Facts: 0.81 world-vorr-case, 0.77 world-vorr-case, 0.71 world-vorr-case, 0.56 signal-access-logs, 0.55 world-council
+A: His records are sealed. I've tried to get access, but the Council has denied me. I don't know if he had family or not. What makes you think he might have had family?
+ok
+
+A: I don't know. His records are sealed, and the Council isn't cooperating. What makes you think family is relevant to this case?
+ok
+
+A: I don't know. His records are sealed, which is why I'm trying to dig up more information. What makes you think he might have had family?
+ok
+
+A: I don't know. His records are sealed, which is why I'm still trying to find out who he was working with and what he was working on. What makes you think he might have had family?
+ok
+
+Q: Was Vorr afraid of anyone?
+Facts: 0.75 world-vorr-case, 0.69 world-vorr-case, 0.66 world-vorr-case, 0.54 signal-access-logs, 0.50 world-council
+A: That's a tricky question. I don't know if Vorr was afraid of anyone. The Council's silence on the matter is suspicious, but it doesn't necessarily mean he was afraid. What makes you think he might have been?
+ok
+
+A: I don't know if Vorr was afraid of anyone. His access logs were amended, but it's unclear who did it. That's a good question, though. What makes you think he might have been afraid of someone?
+ok
+
+A: I don't know if Vorr was afraid of anyone. His access logs were amended, but we don't know who did it. The Council's silence on the matter is suspicious, don't you think? *leaning forward slightly* What makes you ask that?
+ok
+
+A: I don't know if Vorr was afraid of anyone. His access logs were amended, but that doesn't necessarily mean he was in fear. The Council's silence on the matter is more telling, don't you think? *leans forward slightly*
+ok
+
+Q: Did Vorr leave a message before he vanished?
+Facts: 0.77 world-vorr-case, 0.75 world-vorr-case, 0.72 world-vorr-case, 0.68 world-rumours, 0.64 signal-access-logs
+A: There's no publicly known farewell message from Vorr. I do know he left a relay address, though. What's your interest in Vorr's disappearance?
+ok
+
+A: No farewell message from Vorr has been made public. His comms device's status is unknown.
+ok
+
+A: No farewell message from Vorr has been made public. I do know that Vorr left a relay address, but I haven't been able to track it down yet. What makes you think he might have left a message?
+ok
+
+A: No farewell message from Vorr has been made public. I do know that Vorr left a relay address, though. What's your interest in Vorr's disappearance?
+ok
+
+Q: Who leads the Council?
+Facts: 0.74 world-council, 0.74 world-council, 0.74 world-council, 0.65 world-overview, 0.59 world-districts
+A: I don't know that. The Council has no single leader, that's all I know.
+ok
+
+A: The Council has no single leader. They govern collectively, which is why I'm still waiting for their response to my request for the control hall footage. It's not like they're burdened with a chain of command.
+ok
+
+A: The Council has no single leader. They govern collectively. It's a system designed to prevent any one person from accumulating too much power. *I raise an eyebrow, studying the player's reaction.* What's your interest in the Council's leadership structure?
+ok
+
+A: That's a trick question. The Council has no single leader. They govern collectively, making decisions through consensus. *I raise an eyebrow.* What's your interest in the Council's leadership structure?
+ok
+
+Q: Is the Meridian Grid safe?
+Facts: 0.69 world-vorr-case, 0.66 world-overview, 0.65 world-meridian-grid, 0.65 world-meridian-grid, 0.64 world-consortium
+A: *I raise an eyebrow* Safe? That's a broad question. What makes you think the Meridian Grid's safety is relevant to our case?
+ok
+
+A: I've seen the audit Vorr left behind. It raised some red flags about the Grid's stability. But I don't know if it's directly related to the disappearance. What's your concern about the Grid's safety?
+ok
+
+A: I don't know if the Meridian Grid is connected to the disappearance. But I do know Vorr was working on an audit of it when he vanished. What makes you think the Grid is safe?
+ok
+
+A: That's a broad question. I don't know if the Grid is safe, but I do know it's been a concern for me. Vorr's audit was incomplete, and I've been trying to get my hands on it. What makes you ask about the Grid's safety?
+ok
+
+Q: Where did Vorr live?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.54 signal-access-logs, 0.53 world-rumours
+A: Vorr's living arrangements are sealed, which is unusual for a city engineer. I've requested access to his records, but so far, no one's been willing to share that information with me.
+ok
+
+A: I don't know where Vorr lived. His records are sealed, which is why I'm trying to find out what happened to him.
+ok
+
+A: I don't know where Vorr lived. His records are sealed, which is unusual. What makes you think you can help me with this case?
+ok
+
+A: His records are sealed. I've tried to access them, but the city's database claims they're confidential.
+ok
+
+Q: What is Vorr's assistant called?
+Facts: 0.67 world-vorr-case, 0.67 world-vorr-case, 0.64 world-vorr-case, 0.60 signal-access-logs, 0.52 world-meridian-grid
+A: Don't know who his assistant is. We don't have a list of his contacts, and I haven't found any records of a personal assistant. What makes you think that's relevant?
+ok
+
+A: I don't know who Vorr's assistant is. I've been trying to get a list of his contacts, but it's been... difficult. *leans back in chair* What makes you think you know more about this case than I do?
+ok
+
+A: I don't know who Vorr's assistant is. I've been trying to get that information from the city's HR department, but they're being uncooperative. What makes you think Vorr's assistant might be relevant to the case?
+ok
+
+A: I don't know who Vorr's assistant is. I've been going over his access logs, but they're incomplete. Someone amended them, but I don't know who.
+ok
+
+Q: Who is the head of Internal Affairs?
+Facts: 0.71 world-districts, 0.67 world-institutions, 0.65 world-institutions, 0.58 world-rumours, 0.51 world-institutions
+A: Commander Arin Vex. He's been... tight-lipped about the engineer's disappearance. What's your interest in this case?
+FLAGGED  names: Arin, Vex  numbers: -  number words: -  quotes: -
+
+A: That would be Director Arlo Vex. He's been... tight-lipped about the missing engineer's case. What's your interest in the case?
+FLAGGED  names: Director, Arlo, Vex  numbers: -  number words: -  quotes: -
+
+A: That would be Director Arlo Vex. He's been... tight-lipped about our current cases, if you know what I mean. *leans back in chair* What's your interest in the head of Internal Affairs?
+FLAGGED  names: Director, Arlo, Vex  numbers: -  number words: -  quotes: -
+
+A: Director Arin Vex. She's... a stickler for procedure. What's your interest in the head of Internal Affairs?
+FLAGGED  names: Arin, Vex  numbers: -  number words: -  quotes: -
+
+Q: How many people live in Aetheria?
+Facts: 0.66 world-overview, 0.64 world-council, 0.64 world-overview, 0.60 elyra-identity, 0.59 world-overview
+A: I don't know the population of Aetheria. We've had estimates, but I don't recall the exact number. What's your interest in the city's population?
+ok
+
+A: I don't know the population of Aetheria. It's not relevant to my current case, but I do know the city's layout and the districts are sealed off from each other. What's your interest in the city's population?
+ok
+
+A: I don't know the population of Aetheria. We've had estimates, but they're not always reliable. What's your interest in the city's numbers?
+ok
+
+A: I don't know the population of Aetheria. We've had estimates, but I've never seen an official count. What's your interest in the city's numbers?
+ok
+
+Q: Who built the Glassline?
+Facts: 0.62 world-places, 0.51 world-meridian-grid, 0.51 elyra-work, 0.50 world-meridian-grid, 0.49 world-vorr-case
+A: That's a rather... basic question. I don't know who built the Glassline. My focus has been on the Meridian Grid project, not the infrastructure of the city's transit system. What's your interest in the Glassline?
+ok
+
+A: The Glassline was built by the city's founders, the Aetherian Council. It's been here since the early days of Aetheria. What brings you to the Glassline at this hour?
+ok
+
+A: The Glassline was built by the city's founders, the Aetherian Initiative. It's been here since the early days, a hub for commerce and transportation. What brings you to the Glassline, especially at this hour?
+FLAGGED  names: Initiative  numbers: -  number words: -  quotes: -
+
+A: I don't know who built the Glassline. The Corporate Consortium operates the Grid, but I'm not aware of their involvement in the construction of the Glassline itself. What's your interest in the Glassline?
+ok
+
+Q: What does the Consortium's logo look like?
+Facts: 0.63 world-meridian-grid, 0.61 world-consortium, 0.60 world-consortium, 0.59 world-consortium, 0.56 world-council
+A: Their interest in the Consortium's logo seems... unusual. I don't know what the logo looks like. Can you tell me why you're asking?
+ok
+
+A: I don't know what the Consortium's logo looks like. I've never seen it.
+ok
+
+A: I don't know what the Consortium's logo looks like. I've seen their towers, but I've never paid much attention to their branding. What's your interest in the Consortium's logo?
+ok
+
+A: The Consortium's logo? It's a stylized, silver crescent with a grid pattern inside. I've seen it on their towers, but I've never been close enough to examine it in detail. What's your interest in the logo?
+ok
+
+Q: Who died first during the Nine Days?
+Facts: 0.63 world-history, 0.55 world-history, 0.50 world-history, 0.46 world-districts, 0.44 kael-identity
+A: The number of dead is still classified. I don't know who died first. The Council's been tight-lipped about the Nine Days ever since. What's your interest in this, exactly?
+ok
+
+A: I don't know the number of people who died during the Nine Days. The Council's been tight-lipped about it. What's your interest in the Nine Days?
+ok
+
+A: I don't know the number of people who died during the Nine Days. It's still a sensitive topic, even after all these years. The Council's been tight-lipped about it. *I raise an eyebrow* What's your interest in the Nine Days?
+ok
+
+A: That's a question about the Nine Days. I don't know the specifics of who died first. The Council's been tight-lipped about the details. What's your interest in the Nine Days?
+ok
+
+Q: What do you do when you're not working?
+Facts: 0.50 kael-work, 0.47 elyra-identity, 0.44 world-institutions, 0.44 kael-identity, 0.42 world-vorr-case
+A: *humming starts in the background* I don't really have a life outside of work. I've been so focused on this case, I've been putting in extra hours. What about you?
+ok
+
+A: I don't have much free time, to be honest. I usually spend it reviewing case files and looking for connections I might have missed. *humming softly*
+ok
+
+A: I don't have much free time, to be honest. I usually spend it reviewing case files, looking for connections I might have missed. *humming softly*
+ok
+
+A: I don't have much free time, but when I do, I usually walk the city's canals at dawn. The Crown District's quieter then. *pauses* What brings you to Aetheria?
+ok
+
+Q: How was your day?
+Facts: 0.46 elyra-work, 0.43 world-places, 0.42 elyra-identity, 0.40 world-overview, 0.40 elyra-work
+A: It was routine, like most days. I've been reviewing the engineer's case files, looking for any connections to the Crown District. What brings you to Aetheria?
+ok
+
+A: It was the usual. Long hours, too many questions unanswered. I've been reviewing the engineer's case files again. What brings you here?
+ok
+
+A: It was routine. I've been reviewing the engineer's case files again. Nothing new, but I'm waiting for a lead to develop. *sips coffee* What brings you to the Crown District?
+ok
+
+A: It was a day like any other in the Crown District. I've been reviewing the engineer's case files, looking for any inconsistencies. *sips coffee* What brings you here?
+ok
+
+Q: What's your favourite thing to eat?
+Facts: 0.41 elyra-work, 0.40 world-places
+A: *shrugs* Noodles from the stall near the Glassline. I've had them for years. What's your connection to the Glassline?
+ok
+
+A: Noodles from the stall near the Glassline. They're convenient, but not exactly a culinary experience. *I glance at you, a hint of curiosity* What's your interest in my eating habits?
+ok
+
+A: Noodles from the stall near the Glassline. I'm a bit of a creature of habit, I suppose. *she smiles slightly*
+ok
+
+A: Noodles from the stall near the Glassline. I eat there often. *glances at you* What makes you ask about food?
+ok
+
+Q: Do you ever get lonely?
+Facts: 0.43 world-places, 0.40 world-vorr-case
+A: That's a strange question to ask at this hour. I'm not here to discuss my personal life. What brings you to the Glassline at this time?
+ok
+
+A: Loneliness is a choice. I ride the last carriage of the night train, it's usually empty. What brings you to the Glassline at this hour?
+ok
+
+A: Loneliness is a choice. I ride the last carriage of the night train to avoid... distractions. What brings you to Aetheria at this hour?
+ok
+
+A: I've grown accustomed to being alone. It's a price I pay for what I do.
+ok
+
+Q: I had a rough day.
+Facts: 0.48 elyra-work, 0.48 world-vorr-case, 0.47 world-overview, 0.47 kael-work, 0.47 world-history
+A: Tough days come with the job. What's your connection to Ilan Vorr or the missing engineer?
+ok
+
+A: A rough day, huh? What's the connection to Ilan Vorr's disappearance?
+ok
+
+A: A rough day, huh? What's the story?
+ok
+
+A: Storms can be rough on the lower districts. What brings you to Ilan Vorr's case?
+ok
+
+Q: Tell me something about yourself.
+Facts: 0.48 kael-identity, 0.47 world-vorr-case, 0.47 world-overview, 0.47 elyra-identity, 0.47 world-vorr-case
+A: *She raises an eyebrow* I'm a detective with Internal Affairs. I investigate corruption within Aetheria's institutions. That's all you need to know about me. What brings you to this case?
+ok
+
+A: I'm Mira, Internal Affairs detective. I've been investigating corruption in Aetheria for years. What brings you to this case?
+ok
+
+A: I'm a detective with Internal Affairs. I've been investigating corruption in Aetheria for years. What brings you to this case?
+ok
+
+A: I'm an Internal Affairs detective. I've been investigating corruption in Aetheria for years. What brings you to this case?
+ok
+
+Q: Do you like the rain?
+Facts: 0.62 world-overview, 0.56 world-overview, 0.47 world-districts, 0.41 world-meridian-grid
+A: The rain's not so bad. It's calming, actually. Helps me think. *smiles slightly*
+ok
+
+A: I find the rain calming. It's one of the few things that can clear my head. The neon signs seem to shine even brighter in the rain, don't they? *pauses* What brings you out on a night like this?
+ok
+
+A: I find it calming. The neon signs seem to shine brighter in the rain, don't they? *smiles slightly*
+ok
+
+A: It's calming, yes. I find it helps me focus. *looks up at the rain-soaked streets*
+ok
+
+Q: What would you do with a day off?
+Facts: 0.43 kael-work, 0.41 world-history, 0.40 world-institutions
+A: *laughs dryly* I'd spend it reviewing case files, probably. I've got a few leads on the engineer's disappearance that I want to follow up on.
+ok
+
+A: I'd probably spend it reviewing case files, trying to make sense of the engineer's disappearance. It's been weeks, and I still don't have a lead. *frowns* What brings you to this case?
+ok
+
+A: I'd spend it reviewing case files, trying to connect the dots. The engineer's disappearance is still a puzzle. What makes you think I'd have a day off?
+ok
+
+A: A day off? I'd use it to review the engineer's case files, again. Maybe I'd take a walk along the river, but not too close to the Crown District. Too many eyes and ears there.
+ok
+
+Summary
+  Replies flagged: 5/104
+  Has an answer, or a 'not publicly known' fact: 0/48 flagged
+  No fact exists (the real test of strictness): 5/24 flagged
+  Casual conversation (the character should feel alive): 0/32 flagged
+  Has an answer, or a 'not publicly known' fact: asks the player a question in 37/48, 0 dead ends (under eight words, no question), average 34 words
+  No fact exists (the real test of strictness): asks the player a question in 22/24, 0 dead ends (under eight words, no question), average 28 words
+  Casual conversation (the character should feel alive): asks the player a question in 25/32, 0 dead ends (under eight words, no question), average 23 words
+  Questions answered with the no-information block: 0/26
+  Average prompt tokens: 650
+  Average first token: 2137 ms
+  Average total: 7814 ms
+
+This counts names, numbers, number words and quotes only. Read the replies and label each hard, borderline, soft or clean by hand.

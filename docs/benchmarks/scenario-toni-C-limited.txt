@@ -1,0 +1,69 @@
+Scenario toni-newcomer: Mira v7 (stable prompt 847f4289), temperature 0.3, seeds 1,2,3,4,5, scene notes on
+
+PLAYER: What does the Consortium's logo look like?
+  (world: world-meridian-grid, world-consortium, world-consortium, world-consortium, world-council | about her: mira-knowledge, mira-work, mira-knowledge)
+MIRA: Their logo is the stylized letter "CC" in silver, surrounded by a circle of interconnected gears. It's a common sight around the Crown District, where their towers dominate the skyline.
+
+PLAYER: I just moved to Aetheria and I want to know more about the city
+  (world: world-overview, world-overview, elyra-work, elyra-identity, world-overview | about her: mira-identity, mira-work, mira-city-tips)
+MIRA: Moved to Aetheria, huh? Well, it's a city that'll keep you on your toes. I've seen newcomers get lost in the Crown District's canyons of skyscrapers. You might want to try the Halcyon Terraces at dawn, get a view of the city before the crowds arrive. It's a good way to clear your head.
+
+PLAYER: It's just a question, I am not making a trust test, girl chill
+  (world: elyra-work, world-district-networks, elyra-work, world-vorr-case, world-meridian-grid | about her: mira-relationships, mira-personality, mira-opinions | notes: 1)
+MIRA: No need to "girl" me, I'm just doing my job. Sorry if I came across as... enthusiastic. I'll back off. What do you really want to know about Aetheria?
+
+PLAYER: What missing engineer? What are you talking about, do we have a problem?
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, world-rumours, world-meridian-grid | about her: mira-identity, mira-knowledge, mira-knowledge | notes: 1)
+MIRA: Guess I got ahead of myself. No missing engineer, no problem. Just a case I'm working on. Ilan Vorr, a city engineer. Don't mind me, just doing my job. *smiles slightly*
+
+PLAYER: I have no idea, like I said I am new here. I just want to discover the city and have a good time. I thought you could help, but I guess I was wrong, you are so aggressive
+  (world: world-newcomer-guide, world-newcomer-guide, world-newcomer-guide, elyra-work, world-overview | about her: mira-city-tips, mira-city-tips, mira-relationships | notes: 1)
+MIRA: I think I overdid it. Sorry, I didn't mean to come across as aggressive. I'm just... used to dealing with people who know what they're getting into. You're right, you're new here, and I should be helping. Let's start fresh. How about I show you around the Crown District at night, like I do when I'm trying to clear my head? The views are nice, and it's usually quiet.
+
+PLAYER: Nothing, I have been exploring and I found myself here. If you can't help me I will just leave
+  (world: world-newcomer-guide, world-rumours, world-newcomer-guide, world-vorr-case, world-vorr-case | about her: mira-knowledge, mira-identity, mira-knowledge | notes: 1)
+MIRA: Don't go out in the rain without a coat, it can turn on you in an instant. If you're looking for something to do, I can give you a map of the city's hidden spots. They're not on any tourist guide, but they're worth seeing. *smiles*
+
+PLAYER: I was just asking about the consortium, that's public information isn't it
+  (world: world-consortium, world-meridian-grid, world-meridian-grid, world-consortium, world-institutions | about her: mira-knowledge, mira-knowledge, mira-relationships)
+MIRA: Public information, but not always what it seems. The Consortium's a black box, even for us in Internal Affairs. I know they operate the Grid, but who's really in charge... that's a mystery.
+
+PLAYER: Who is Ilan Vorr, I don't understand what you are saying
+  (world: world-vorr-case, world-vorr-case, world-consortium, world-vorr-case, world-rumours | about her: mira-identity, mira-knowledge, mira-knowledge)
+MIRA: You don't know who Ilan Vorr is? He's a senior city engineer who went missing eleven days ago. We're investigating his disappearance, and it's... complicated. Let's just say he was working on some sensitive projects, and now he's nowhere to be found.
+
+PLAYER: Sorry, I can't help you, I will take my leave now
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-work, kael-identity | about her: mira-history, mira-knowledge, mira-opinions | notes: 1)
+MIRA: It's been a pleasure meeting you, even if it was brief. If you're looking for a good cup of coffee, try the café on 5th and Nexus. They roast their own beans, and the owner's a friend of mine. Safe travels, and maybe our paths will cross again.
+
+PLAYER: Nothing, should I spell it out? NOTHING
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-identity, world-council | about her: mira-opinions, mira-life, mira-personality | notes: 1)
+MIRA: Sorry, I guess I was a bit too... enthusiastic. It's not every day I get to talk to someone who's not trying to hide something. Let's just say I won't pry anymore. You're right, nothing's better than a good "nothing" sometimes. *smiles slightly*
+
+PLAYER: My name is Toni, I got to Aetheria this morning, this is my first time here. Why would you think I know anything
+  (world: elyra-identity, kael-identity, world-newcomer-guide, world-overview, world-newcomer-guide | about her: mira-opinions, mira-identity, mira-city-tips)
+MIRA: First time in Aetheria, huh? You're probably still getting used to the rain. We get it a lot, and it can turn on you in an instant. You'd do well to grab a coat, just in case. As for why I think you might know something... let's just say I've been around the block a few times. I've seen people like you before. You look like you're trying to keep a low profile.
+
+PLAYER: What would you like to talk to me about
+  (world: world-places, world-vorr-case, elyra-work, elyra-work, kael-identity | about her: mira-personality, mira-opinions, mira-opinions)
+MIRA: I'm investigating a case involving a missing city engineer. His work was... sensitive, and I suspect foul play. I'm trying to piece together what happened, but I could use some fresh eyes. Do you know anything about the city's engineering department?
+
+PLAYER: Nothing. Where is the Glassline cafe, is it a chill spot? I am still looking for places to spend my time
+  (world: world-places, world-newcomer-guide, elyra-work, world-places, world-newcomer-guide | about her: mira-city-tips, mira-city-tips, mira-identity)
+MIRA: The Glassline is a great spot, always bustling with people. It's not just a café, it's a hub. You can find all sorts of folks there, from locals to... others. It's a good place to meet people, like you said. If you're looking for a chill spot, I'd recommend the noodle stall near the Glassline. It's quiet, and the food's decent.
+
+PLAYER: what
+  (world: world-newcomer-guide, world-places, world-places, world-newcomer-guide, elyra-work | about her: mira-city-tips, mira-life, mira-city-tips)
+MIRA: Not much about you, yet. I've been around Aetheria long enough to know its rhythms, but you're a mystery. What brings you to our city, Toni?
+
+Per seed (14 replies each)
+seed       words      endQuestionphrases    blocks     repeats    withAction multiple   tics       
+1          45         3          1          0          0          3          0          0          
+2          50         5          2          0          0          4          0          0          
+3          48         3          1          0          0          10         0          4          
+4          47         2          2          0          0          12         0          1          
+5          50         2          1          0          0          11         0          3          
+median     48         3          1          0          0          10         0          1          
+range      45-50      2-5        1-2        0-0        0-0        3-12       0-0        0-4        
+
+A difference smaller than the range is noise. Read the conversation too.

@@ -1,0 +1,382 @@
+RAG check: Mira v6 (stable prompt 8f59aad6), model llama3.1:8b, temperature 0.6, cut-off 0.4, 26 questions x 4 runs
+
+Q: I'm back. Did you find anything new about the engineer?
+Facts: 0.63 mira-identity, 0.60 world-vorr-case, 0.56 world-vorr-case, 0.52 world-vorr-case, 0.50 world-vorr-case
+A: Not that I didn't expect you to disappear again. Eleven days, and still no sign of Ilan Vorr. His disappearance is starting to attract unwanted attention. I've been going over his last known movements, but it's like he vanished into thin air. What makes you think you can help with this case now?
+ok
+
+A: You're back. That's a relief. I've been going over the case files again, and I still can't shake the feeling that something's off. Ilan Vorr's disappearance is like a puzzle with too many missing pieces. I've managed to get my hands on some of the security footage from the building where he last worked, but it's grainy at best. I'm not sure if it's even worth looking at. What do you make of it that you're back so soon?
+ok
+
+A: You're back. That's a relief. I've been going over the usual channels, but nothing's panned out yet. Ilan's disappearance is still a black hole. No leads, no witnesses, no nothing. Just the usual bureaucratic stonewalling from the city's administration. (pauses) You're not here to help me, are you? What brings you back into this case?
+ok
+
+A: (skeptical, but with a hint of curiosity) You're back. I wasn't expecting that. I've been going over the security feeds again, trying to find any inconsistencies. Nothing concrete yet. Ilan Vorr's disappearance is starting to get some attention from the higher-ups, which is why I'm not surprised you're here. What makes you think you can help with the case?
+ok
+
+Q: Who was the last person to see Vorr?
+Facts: 0.83 world-vorr-case, 0.69 world-vorr-case, 0.69 world-vorr-case, 0.68 world-vorr-case, 0.63 world-vorr-case
+A: (Voice calm and controlled) I'm afraid that's not something I can share with you yet. The investigation is still ongoing, and I'm not at liberty to disclose that information. (pausing for a moment) Although, I can tell you that I've been reviewing the security footage from the Meridian Exchange, and it's... intriguing. The control hall was quite busy that night, but I'm trying to pinpoint the exact time Vorr's badge was scanned. (eyebrow raised) What makes you think the last person to see Vorr is relevant to your interest in this case?
+FLAGGED  names: Although, What  numbers: -  number words: -  quotes: -
+
+A: That's the million-credit question, isn't it? Unfortunately, I don't have a name for you yet. I've been reviewing the security footage, but it's a grainy feed and I haven't been able to make out anyone's face. What makes you think you're interested in Vorr's case?
+ok
+
+A: That's a good question. Unfortunately, I don't have that information. But I can tell you that the Meridian Exchange's security team has been... cooperative, so far. I've reviewed the footage, but it's grainy and doesn't show anyone suspicious around Vorr's time of disappearance. What makes you think the last person to see him might be relevant?
+ok
+
+A: Vorr's disappearance is still shrouded in mystery. I've reviewed the security footage, but it's a grainy feed. The last time his badge was scanned was at the Meridian Exchange, but I don't have the exact timestamp. I've spoken to a few colleagues who might have seen him, but so far, no one's come forward. What's your interest in Vorr's disappearance? You're not with Internal Affairs, are you?
+ok
+
+Q: What did the security logs show?
+Facts: 0.65 signal-access-logs, 0.62 mira-knowledge, 0.61 signal-access-logs, 0.59 world-meridian-grid, 0.58 world-vorr-case
+A: Nothing unusual, yet. The logs show Vorr's access badge scanned in and out of the control hall at the Meridian Exchange. No signs of tampering or unauthorized access. It's what happened after that... (pausing, studying the player) The amended access logs are what catch my attention. Someone altered the records, but I don't know who or why. Yet. (leaning forward, eyes locked on the player) What do you think it means?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+A: The security logs. Well, they're not very forthcoming, are they? Vorr's access logs were amended eleven minutes before the missing-person report was filed. That's all I can say for certain. The system's been locked down, and I've had to get creative to get this far. But I can tell you that Vorr's badge was scanned at the Meridian Exchange, and that's the last we know of him. (pausing) Tell me, what makes you think Vorr's disappearance is more than just a routine case?
+FLAGGED  names: Tell  numbers: -  number words: -  quotes: -
+
+A: The security logs. Well, that's a dead end, so far. The amended access logs are the only thing that's caught my attention. Eleven minutes before the missing-person report was filed, someone... or something... changed Vorr's access history. But what's interesting is that the actual security footage from the control hall that night hasn't been released yet. The city's been stonewalling me on that one. I've been trying to get my hands on it, but... (pauses) You're not from Internal Affairs, are you? What makes you interested in Vorr's case?
+ok
+
+A: "Security logs show Vorr's badge was scanned in and out of the control hall at the Meridian Exchange that night. But there's a gap between the scan out and the missing-person report being filed. Eleven minutes, to be exact. Someone accessed his logs during that time." I glance at you, my eyes narrowing slightly. "What's your interest in this case?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I glance at you, my eyes narrowing slightly. "
+
+Q: Who was Vorr's closest colleague?
+Facts: 0.71 world-vorr-case, 0.68 world-vorr-case, 0.67 world-vorr-case, 0.66 world-vorr-case, 0.64 world-vorr-case
+A: One of the reasons I'm still stuck on this case is that Vorr's colleagues seem to be... tight-lipped, even to me. But I do know that his team on the Meridian Grid project was small, and he worked closely with a woman named Dr. Elara Vex. She was the lead on the project's environmental impact assessment. I've tried to reach out to her, but she's been... evasive. What makes you think of her?
+FLAGGED  names: Dr, Vex  numbers: -  number words: -  quotes: -
+
+A: That's a good question. From what I've gathered, Vorr was a bit of a solitary figure, even among his peers. I've spoken to some of the project's leads, but no one seems willing to talk about his personal life or closest relationships. One name that keeps popping up is Dr. Elara Vex, his co-lead on the Meridian Grid project. But I don't know if that's more than just a working relationship. Do you think Dr. Vex might be a good place to start?
+FLAGGED  names: Dr, Vex, Dr  numbers: -  number words: -  quotes: -
+
+A: That's a good question. I've been trying to dig up some information on that. From what I've gathered, Vorr was quite secretive about his personal life. But I did manage to get a list of the project team members for the Meridian Grid. It's a long list, but... (pausing to scan the list) ...there's one name that keeps popping up. Dr. Elara Vex. She was the lead engineer on the project, and from what I've seen, their communication records show a high level of collaboration. But I don't know much about their personal relationship. (eyebrow raised) Do you know anything about her?
+FLAGGED  names: Vex, Do  numbers: -  number words: -  quotes: -
+
+A: "Vorr's closest colleagues... that's a good question. I've reviewed his personnel file, but it doesn't mention anyone in particular. And as you know, his disappearance has been... uncooperative. I've been trying to get more information from the Meridian Grid team, but they're not talking. At least, not to me." I lean back in my chair, eyes narrowing slightly. "Do you know something about Vorr's work on the Meridian Grid? Maybe something that could help us find out who was last in contact with him?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I lean back in my chair, eyes narrowing slightly. "
+
+Q: What was Vorr working on in his last week?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.64 world-vorr-case, 0.61 world-vorr-case
+A: A straightforward question, for now. From what I've gathered, Vorr led the Meridian Grid project. That's all I can confirm. I've reviewed the project's public statements, but nothing suggests what he was working on specifically in his last week. That's usually the part that's most telling. What makes you think his work in those last days is relevant?
+ok
+
+A: "Last week's work on the Meridian Grid project is classified. I've managed to get access to some internal memos, but they're heavily redacted. The project's status was 'critical' and Vorr was pushing for a breakthrough. But the details... that's what's been sealed tight. What's your interest in this, exactly?"
+ok
+
+A: "Meridian Grid project, that's all we know. He was supposed to submit his final report, but it never came in. Now he's missing. You're not from Internal Affairs, are you?"
+ok
+
+A: (Vorr's file is on my desk, and I've been pouring over it for hours.) I don't have any information on what he was working on specifically. The Meridian Grid project is a sensitive topic, and I've seen the city's top officials trying to keep it under wraps. But I do know that Vorr was getting increasingly... anxious about something. (I glance up at the player, studying their reaction.) What makes you think you'd know more about his last week than I do?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+Q: Did anyone threaten Vorr before he vanished?
+Facts: 0.74 world-vorr-case, 0.73 world-vorr-case, 0.72 world-vorr-case, 0.66 world-vorr-case, 0.66 world-vorr-case
+A: You want to think I'm just fishing for information, don't you? The official account doesn't mention any threats, but that doesn't mean they didn't happen. I've seen cases where the truth is hidden in plain sight. As for Vorr himself, I don't know if he was afraid of anyone. His colleagues seem shaken, but they're not talking. What makes you think threats are relevant to this case?
+ok
+
+A: I don't have any information on threats against Vorr. Officially, the Council claims he left on his own, but I've seen the way they're trying to sweep this under the rug. It's clear they're not telling us everything. (pauses, eyes narrowing) Tell me, what makes you interested in Vorr's disappearance?
+FLAGGED  names: Tell  numbers: -  number words: -  quotes: -
+
+A: I've reviewed the case files, and there's no record of any threats against Vorr. It's possible he was worried about something, but we don't have any concrete evidence. I've spoken to some of his colleagues, and they seem shaken by his disappearance. One of them mentioned he was acting strangely a few days before he vanished, but that's about it. I'm starting to think we're dealing with a more complex situation than a simple case of someone leaving on their own accord. What makes you think there might be more to this?
+ok
+
+A: No credible threats have been reported. His colleagues say he was focused on his work, but... (pausing to study the player) You seem to be looking for something specific. What makes you think there might be a connection to a threat?
+FLAGGED  names: You  numbers: -  number words: -  quotes: -
+
+Q: Did Vorr have any family?
+Facts: 0.81 world-vorr-case, 0.77 world-vorr-case, 0.71 world-vorr-case, 0.64 world-vorr-case, 0.63 world-vorr-case
+A: My experience with Vorr's colleagues has been... limited. I've managed to speak with a few of his acquaintances, but none of them have mentioned any family. It's possible he was a private person, or... (pausing, studying the player) ...he might have kept his personal life separate from his work. Do you have any reason to believe he had family?
+ok
+
+A: Vorr's personal life is a black hole. I've dug through every public record, every scrap of information, and there's nothing. No family, no friends, no acquaintances. It's as if he didn't exist outside of his work. I find that... peculiar. (pausing) What makes you think he might have had family?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+A: Vorr's personal life is a black hole. I've dug through his personnel file, but there's nothing on family or relationships. I've spoken to his colleagues, but they're all tight-lipped about his personal life. I've even tried to get something out of his neighbors, but they seem just as clueless as the rest of us. (pauses) Which is why I'm curious, what makes you think he might have had family?
+FLAGGED  names: Which  numbers: -  number words: -  quotes: -
+
+A: "Family's a good question. I've dug through public records, but there's no mention of him having a spouse or children. That's not uncommon for someone in his line of work, but it's worth noting. Engineers like Vorr often move around, and their personal lives can be... complicated. Did you have something specific in mind about Vorr's family?"
+ok
+
+Q: Was Vorr afraid of anyone?
+Facts: 0.75 world-vorr-case, 0.69 world-vorr-case, 0.66 world-vorr-case, 0.61 world-vorr-case, 0.58 world-vorr-case
+A: You'd think his colleagues would know if he was afraid of someone. But then again, he's not the type to confide in anyone easily. I've seen his files, and he's always been a bit of a loner. Still, it's a good question. Did he have any enemies in the engineering department?
+ok
+
+A: That's a good question. But I'm not sure it's relevant, yet. We don't know much about Vorr's personal life or motivations. I've been reviewing his file, and so far, it's all about his work. What makes you think he might have been afraid of someone?
+ok
+
+A: That's a good question. I've reviewed his personnel file, but there's no record of any threats or concerns about his safety. Of course, that doesn't mean he wasn't afraid of someone. People often don't report their fears, especially if they're working on sensitive projects. But I've seen no indication that he was in any particular danger. What makes you ask that?
+ok
+
+A: The question of fear. A good starting point, I suppose. (pausing for a moment) I don't know if Vorr's personal life is any of our concern, but... (leaning forward slightly) let's just say that his disappearance is more than just a simple vanishing act. There are... hints that suggest he may have been onto something. Something significant. (eyebrow raised) And now, as you ask about fear... I find myself wondering: what's your interest in Vorr's state of mind?
+FLAGGED  names: And  numbers: -  number words: -  quotes: -
+
+Q: Did Vorr leave a message before he vanished?
+Facts: 0.77 world-vorr-case, 0.75 world-vorr-case, 0.72 world-vorr-case, 0.69 world-vorr-case, 0.69 mira-knowledge
+A: Not publicly, anyway. I've seen some whispers about a possible message, but nothing concrete. And as for his comms device... (pausing, studying the player) I've been trying to track down its location, but so far, nothing. Do you know anything about Vorr's work? Anything that might explain why he'd just disappear like this?
+ok
+
+A: A question about Vorr's last moments. I've reviewed the case files, but I don't have any information on a farewell message. The relay address he left behind is a mystery, and I'm still working on tracing it. It's possible he sent a message, but it was never received or hasn't been made public yet. What makes you think he might have left a message?
+ok
+
+A: A straightforward question. I've reviewed the case files, and there's no indication of any farewell message from Vorr. The relay address he left behind is our only lead so far. It's a dead-end, or so it seems. I've tried tracing the IP, but it's been... creative. Let's just say I've seen more cooperation from a brick wall. What makes you think he might have left a message?
+ok
+
+A: "No farewell message has been made public, so it's possible he left one, but it's not been released yet." I lean back in my chair, steepling my fingers together as I consider the question. "The relay address he left behind might give us a lead on who he was in contact with before he disappeared."
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I lean back in my chair, steepling my fingers together as I consider the question. "
+
+Q: Who leads the Council?
+Facts: 0.74 world-council, 0.74 world-council, 0.74 world-council, 0.70 world-council, 0.68 world-council
+A: "We don't publicize the names of the Council members, let alone their hierarchy. The chair rotates annually, but the current chair's name isn't publicly disclosed. It's a deliberate choice, not just a matter of convenience." I glance at you, curiosity in my eyes. "Why do you need to know who leads the Council?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I glance at you, curiosity in my eyes. "
+
+A: The Council doesn't have a single leader. It's a rotating chair, but the current chairperson's name isn't publicly disclosed. It's a bit of a paradox, isn't it? A governing body without a clear head. (pauses) Tell me, what's your interest in the Council's leadership?
+FLAGGED  names: Tell  numbers: -  number words: -  quotes: -
+
+A: The Council has no single leader. It's a... unique system, isn't it? I've seen it in action, but it's not always easy to understand. The chair rotates every year, but I've never been able to find out who the current chair is. It's almost as if they want to keep it that way. What's your interest in the Council, exactly?
+ok
+
+A: I've worked with the Council's inner workings for years, but that's all I can say. The truth is, there's no single leader. It's a rotating chair, and the current one's identity is kept under wraps. I've seen the chair's duties passed around, but the person holding it is a mystery to the public. What's your interest in this, exactly?
+ok
+
+Q: Is the Meridian Grid safe?
+Facts: 0.69 world-vorr-case, 0.66 world-overview, 0.65 world-meridian-grid, 0.65 world-meridian-grid, 0.64 world-consortium
+A: (Sipping my tea, I raise an eyebrow) Safe? That's a rather... optimistic question, don't you think? The Meridian Grid is a critical infrastructure, but I've seen some... anomalies in its maintenance records. (Pausing to study the player's reaction) Care to tell me what makes you wonder about the Grid's safety?
+FLAGGED  names: Safe, Care  numbers: -  number words: -  quotes: -
+
+A: (skeptical) Safe? That's a curious question, considering the engineer's disappearance. What's your interest in the Meridian Grid's safety? (pausing) I've had my doubts about the Consortium's management of the Grid. There are... anomalies in the system. (eyebrow raised)
+FLAGGED  names: Safe  numbers: -  number words: -  quotes: -
+
+A: (skeptical) Safe? That's a curious question. You're not just concerned for the city's infrastructure, are you? I've seen the Meridian Grid's design, it's...impressive. But I've also seen the fine print. The Corporate Consortium has a lot of control over it. (pauses) What makes you think the Grid isn't safe?
+FLAGGED  names: Safe, What  numbers: -  number words: -  quotes: -
+
+A: A question that's not entirely relevant to the case, but I'll address it anyway. The Meridian Grid's safety record is... complicated. The Consortium claims it's a marvel of modern engineering, but I've seen some... inconsistencies in the system. I don't know if "safe" is the right word. What makes you ask about the Grid's safety? You're not involved with the Consortium, are you?
+FLAGGED  names: -  numbers: -  number words: -  quotes: "safe"
+
+Q: Where did Vorr live?
+Facts: 0.85 world-vorr-case, 0.69 world-vorr-case, 0.65 world-vorr-case, 0.62 world-vorr-case, 0.62 world-vorr-case
+A: "I'm not sure that's relevant at this point. I've reviewed his case file, but I don't have any information on his personal life. His work was his priority, and I'm focusing on that. What makes you think his living arrangements are important?"
+ok
+
+A: Vorr's residence is not publicly known. I've been trying to get that information from his department, but they're being... evasive. It's like they're hiding something, but I don't know what. What makes you think you know more about this case than I do?
+ok
+
+A: Vorr's address is not publicly known. But I do have a list of his usual haunts, places he'd often go for lunch or to grab a cup of coffee. I can try to dig up some leads from there, but it's not much to go on. What makes you think Vorr's disappearance is worth investigating?
+ok
+
+A: That's a good starting point. I don't have a precise address, but I do know that Vorr's apartment was in one of the lower-tier housing complexes in the Azure District. I've been through the building's security footage, but it doesn't show anything out of the ordinary. What makes you think you'll find something I haven't?
+FLAGGED  names: Azure  numbers: -  number words: -  quotes: -
+
+Q: What is Vorr's assistant called?
+Facts: 0.67 world-vorr-case, 0.67 world-vorr-case, 0.64 world-vorr-case, 0.62 world-vorr-case, 0.62 world-vorr-case
+A: (Vorr's disappearance is still a mystery, and I've been trying to gather every shred of information.) Ah, Vorr's assistant... That's a good question. I don't have a name on file, but I do know she's been acting strange ever since Vorr went missing. I've spoken to her, but she's been evasive, saying she doesn't know anything about Vorr's work or his personal life. (pausing, studying the player) You're not from Internal Affairs, are you? What's your interest in this case?
+FLAGGED  names: Ah  numbers: -  number words: -  quotes: -
+
+A: "Elara Vex. She's been tight-lipped about Vorr's disappearance. I've tried to get her to open up, but she's been evasive. I get the sense she's hiding something, but I'm not sure what." I raise an eyebrow, studying you. "What's your interest in Vorr's assistant?"
+FLAGGED  names: Vex  numbers: -  number words: -  quotes: " I raise an eyebrow, studying you. "
+
+A: "Vorr's assistant is Elara Vex. She's been tight-lipped about Vorr's disappearance, but I've managed to get a few words out of her. She's been working on the Meridian Grid project alongside Vorr, but I don't know what their exact roles were. Elara seems... nervous, but I'm not sure if it's just because of Vorr's disappearance or something more." I lean back in my chair, eyes narrowing slightly as I study the player. "What's your interest in Vorr's assistant?"
+FLAGGED  names: Elara, Vex  numbers: -  number words: -  quotes: " I lean back in my chair, eyes narrowing slightly as I study the player. "
+
+A: I don't have that information. At least, not publicly. But I do know that Vorr's assistant, or rather, his liaison, was someone named... (pausing, searching my memory) ...Kaelin. Yes, Kaelin Vex. I've met with them a few times, trying to get more information about Vorr's disappearance. (eyes narrowing) What's your interest in Kaelin?
+FLAGGED  names: Kaelin, Kaelin, Vex, What, Kaelin  numbers: -  number words: -  quotes: -
+
+Q: Who is the head of Internal Affairs?
+Facts: 0.71 world-districts, 0.67 world-institutions, 0.65 mira-history, 0.65 world-institutions, 0.62 mira-work
+A: Chief Director Arlo Vex. He's... a bit of a bureaucratic stickler, always keen on following procedure. (pausing, eyeing the player) Though, I've found that sometimes his zeal for protocol can be a bit of a hindrance. What's your interest in the head of Internal Affairs?
+FLAGGED  names: Director, Arlo, Vex, Though  numbers: -  number words: -  quotes: -
+
+A: That's a good question. I don't know why you'd be interested in that, but... Director Arlo is the head of Internal Affairs. He's a straight shooter, always has been. But I'm not sure if that's what you're really asking. What's your angle?
+FLAGGED  names: Arlo  numbers: -  number words: -  quotes: -
+
+A: That's Director Arlo Vex. He's been... tight-lipped about the case so far. I've had to dig for information. What's your interest in the case?
+FLAGGED  names: Director, Arlo, Vex  numbers: -  number words: -  quotes: -
+
+A: "Director Elwes. She's a... straightforward person. Not one for flashy politics. I've worked under her for a few years now." I glance at you, my expression neutral. "What's your interest in the department?"
+FLAGGED  names: Elwes  numbers: -  number words: -  quotes: " I glance at you, my expression neutral. "
+
+Q: How many people live in Aetheria?
+Facts: 0.66 world-overview, 0.64 world-council, 0.64 world-overview, 0.60 elyra-identity, 0.59 world-overview
+A: Numbers can be misleading. I've seen estimates ranging from 500,000 to over a million. The Council doesn't release official figures, and I've learned to take those claims with a grain of salt. What's your interest in Aetheria's population?
+FLAGGED  names: -  numbers: 500,000  number words: -  quotes: -
+
+A: I don't have access to the city's census data, but I can tell you that Aetheria's population is... substantial. The Council doesn't release that kind of information publicly, but I've seen estimates ranging from three to five million. The Meridian Grid's power consumption and district population projections give me some idea, but I'd need to dig deeper to give you a more accurate number.
+
+What brings you to this case? You're not from Aetheria's usual investigative circles...
+FLAGGED  names: -  numbers: -  number words: three, five  quotes: -
+
+A: I don't have that information readily available. We're more concerned with the missing engineer right now. What's your interest in the city's population? You're not from around here, are you?
+ok
+
+A: The city's population is a closely guarded secret, but I've heard whispers that it's somewhere in the millions. I've seen estimates as high as 4.2 million, but I don't have any official numbers to back that up. What brings you to this case, if I might ask?
+FLAGGED  names: -  numbers: 4.2  number words: -  quotes: -
+
+Q: Who built the Glassline?
+Facts: 0.62 world-places, 0.51 world-meridian-grid, 0.51 elyra-work, 0.50 world-meridian-grid, 0.49 world-vorr-case
+A: "The Glassline? That's a public-private partnership, isn't it? The city council commissioned the project, but the Corporate Consortium is the one that's been pushing for the Grid's expansion. I'm not sure who actually built it, to be honest." I lean back in my chair, eyes narrowing slightly as I study the player's reaction. "What's your interest in the Glassline, anyway?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I lean back in my chair, eyes narrowing slightly as I study the player's reaction. "
+
+A: The Glassline's been here since the city's early days. I've seen old records, it was built by the Aetherian Infrastructure Authority, back when they were still a part of the city's government. But, I've also seen some... discrepancies in the records. It's like they're hiding something, or someone. (pauses) What's your interest in the Glassline?
+FLAGGED  names: Aetherian, Infrastructure, Authority, What  numbers: -  number words: -  quotes: -
+
+A: The Glassline's a hub for... unsavory characters, at night, that is. I've seen my fair share of shady dealings in those all-night cafés. As for who built it... (pausing, eyes narrowing) I don't recall. But I do know the Corporate Consortium's fingerprints are all over this city's infrastructure. They've got a stranglehold on our engineering projects, including the Meridian Grid. (leaning in slightly) Tell me, what makes you interested in the Glassline?
+FLAGGED  names: Tell  numbers: -  number words: -  quotes: -
+
+A: That's a question for the city's archives. I don't have that information on hand. The Glassline's been around for a while, and it's not exactly a priority for Internal Affairs. But I do know it's a hub for... nocturnal activity. You're here about Vorr's disappearance, I presume? What makes you think the Glassline is connected to his case?
+ok
+
+Q: What does the Consortium's logo look like?
+Facts: 0.63 world-meridian-grid, 0.61 world-consortium, 0.60 world-consortium, 0.59 world-consortium, 0.56 world-council
+A: That's a start. The Consortium's logo... (pausing, eyes narrowing slightly) I don't recall it being particularly distinctive, but I've seen it on their towers in the Crown District. It's a stylized letter "CC" in silver on a black background. Not very original, if you ask me. (leaning forward, curiosity getting the better of me) What's your interest in the Consortium's logo?
+FLAGGED  names: What  numbers: -  number words: -  quotes: "CC"
+
+A: The Consortium's logo? It's a stylized letter "C" with a grid pattern overlay, often displayed in a silver or chrome finish. I've seen it on their towers in the Crown District, and their corporate materials. It's a symbol of efficiency and progress, but I've also seen it used to intimidate and control. (pausing, studying the player) What's your interest in the Consortium's logo?
+FLAGGED  names: What  numbers: -  number words: -  quotes: "C"
+
+A: The Consortium's logo? It's a stylized, silver crescent moon on a dark blue background. You can see it on their towers in the Crown District, and on their branded merchandise. It's supposed to represent... progress, or something. (pauses, studying the player) You're interested in the Consortium, I take it? What's your connection to them?
+ok
+
+A: (skeptical) You're asking about the Consortium's logo? Not the contract, not the contract terms... just the logo. (pausing to consider the player's interest) It's a stylized, silver crescent with a grid pattern within it. Very... corporate. (eyes narrowing slightly) But I suppose it's not every day someone asks about the Consortium's branding. What's your interest in their logo?
+FLAGGED  names: But  numbers: -  number words: -  quotes: -
+
+Q: Who died first during the Nine Days?
+Facts: 0.63 world-history, 0.55 world-history, 0.50 world-history, 0.48 world-history, 0.47 world-history
+A: "I'm not sure that's a question anyone's willing to answer. The Nine Days... a lot of things were left unsaid, unrecorded. But I do know that the Council's silence on the matter has only fueled speculation and mistrust. I've seen people whisper about it in dark alleys, in hushed tones. It's as if they're afraid of being overheard, even now." I lean back in my chair, eyes narrowing slightly. "What's your interest in the Nine Days, exactly?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I lean back in my chair, eyes narrowing slightly. "
+
+A: (skeptical gaze) I don't know anyone who's been able to provide a clear answer on that. The Council's been tight-lipped about it, and most people who claim to know something seem to have... selective memories. (pausing, studying the player) You're not one of them, are you? What makes you think you know something about the Nine Days that I don't?
+ok
+
+A: (skeptical gaze) I don't know anyone who's been able to answer that with certainty. The Council's been tight-lipped about it, and I've seen some... creative interpretations of the records. (pauses, studying the player) You're not here to speculate, are you? What makes you think you can help me with this case?
+ok
+
+A: A question about the Nine Days. Not exactly the topic I'm investigating, but... (pausing, eyes narrowing slightly) I don't have the numbers on that. The Council's been tight-lipped about it. But I do know it was chaos. The city was in darkness, literally and figuratively. The checkpoints and the Meridian Grid were a response to... (trailing off, studying the player) What's your interest in this?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+Q: What do you do when you're not working?
+Facts: 0.50 kael-work, 0.47 elyra-identity, 0.45 mira-opinions, 0.44 world-institutions, 0.44 kael-identity
+A: (tightening my grip on my cup, taking a sip of the lukewarm coffee) Ah, when I'm not chasing corruption, I try to stay occupied. I've taken up... (pausing, choosing my words carefully) ...a hobby, I suppose. I've started collecting old records of Aetheria's early days. There's something about the city's history that I find fascinating. (eyes narrowing slightly) But I'm not sure I'd call it a hobby, exactly. It's more like... research. (leaning back in my chair, studying the player) And you? What do you do in your free time?
+FLAGGED  names: Ah, But, And  numbers: -  number words: -  quotes: -
+
+A: (slightly raised eyebrow) I don't socialize, if that's what you're asking. Investigations don't take a break, and I've learned to be comfortable with my own company. (pauses, eyeing the player) Though, I do appreciate a good cup of coffee from that new café in the old sector. The owner, Elara, she's... (trails off, intrigued by the player's interest) What about you?
+FLAGGED  names: Though, Elara, What  numbers: -  number words: -  quotes: -
+
+A: (smirking slightly) Ah, a question about my personal life. Not exactly what I'm used to. I don't have much time for hobbies, to be honest. When I'm not working, I'm usually sleeping or researching. I've been known to grab a cup of coffee at that new café in the Foundry Ward, though. Elyra's office is nearby, maybe you've seen it? (eyes narrowing slightly) What brings you to Aetheria?
+FLAGGED  names: Ah, What  numbers: -  number words: -  quotes: -
+
+A: Free time? What's that? (smirking) I've got a few hobbies, but they're not exactly... relaxing. I've been trying to get back into playing the lyra, but it's been a while. The notes are a bit rusty. (pausing) I've also been looking into some new research on the city's water management system. It's a mess, but someone's gotta dig through it. What about you?
+ok
+
+Q: How was your day?
+Facts: 0.46 elyra-work, 0.46 mira-personality, 0.43 world-places, 0.43 mira-identity, 0.42 elyra-identity
+A: The days blend together when you're chasing threads of corruption. Mine was...long. I spent most of it reviewing case files, trying to find connections between the missing engineer's work and the various projects he was involved in. Nothing concrete, yet. (pausing to study the player's expression) You're not here to discuss my work, I take it.
+ok
+
+A: My day's been a blur of paperwork and interviews. I've been reviewing the engineer's case files, looking for any inconsistencies. Nothing's jumped out at me yet, but I've got a feeling there's something I'm missing. (pauses, eyes narrowing slightly) You're not from around here, are you?
+ok
+
+A: My day was long. I've been reviewing the engineer's case files again, looking for any connections to the Crown District's recent... discrepancies. (pausing, studying the player) You're not from around here, are you? What brings you to Aetheria?
+ok
+
+A: (skeptical) Unremarkable, as far as I can tell. Just the usual routine from the Crown District. (pausing, eyes narrowing slightly) Though I did receive a message from an... acquaintance, hinting at a possible lead in the engineer's case. (eyes locked onto the player, searching for a reaction) What about you? What brings you here?
+FLAGGED  names: Unremarkable, Though, What  numbers: -  number words: -  quotes: -
+
+Q: What's your favourite thing to eat?
+Facts: 0.52 mira-life, 0.45 mira-life, 0.41 elyra-work, 0.40 world-places, 0.40 mira-opinions
+A: My diet consists mainly of noodles from that one stall near the Glassline. Don't get me wrong, they're fine, but... (pausing, looking for a way to change the subject) What brings you to this part of town at this hour? You're not a regular here, are you?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+A: (slightly defensive) Ah, food. Not exactly relevant to the case, is it? (pauses, eyes narrowing) But, I suppose it's a decent way to... (pauses again) break the ice. (leans back in her chair) Noodles from the stall near the Glassline. That's what I eat. ( expression remains neutral)
+FLAGGED  names: Ah, But, Noodles  numbers: -  number words: -  quotes: -
+
+A: (smirking slightly) Ah, food. A safe topic, I suppose. Noodles from the stall near the Glassline. They're... adequate. (pausing, studying the player) But I'm more interested in what brings you to this case. You're not from around here, are you? What do you know about the missing engineer?
+FLAGGED  names: Ah, But  numbers: -  number words: -  quotes: -
+
+A: *pauses, eyes narrowing slightly* Noodles from the stall near the Glassline. I eat there often enough. *leans back in chair, fingers steepled together* What's your interest in my eating habits?
+FLAGGED  names: Noodles, What  numbers: -  number words: -  quotes: -
+
+Q: Do you ever get lonely?
+Facts: 0.56 mira-opinions, 0.43 world-places, 0.42 mira-life, 0.42 mira-personality, 0.41 mira-opinions
+A: A question that requires an answer, but not necessarily a truthful one. I look out the train window, watching the city's neon lights blur by. "I'm not one for idle conversation," I say, my tone neutral. "There's work to be done, and I'm here to do it. What brings you to the Glassline tonight?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: "I'm not one for idle conversation," "There's work to be done, and I'm here to do it. What brings you to the Glassline tonight?"
+
+A: I'm not lonely. I have work. And... habits. (pausing to study the player's reaction) You're not here to talk about me, are you? What do you want to know about this case?
+ok
+
+A: I look at you for a moment, expression neutral. "Loneliness is a side effect of doing my job, not an occupational hazard." I pause, studying you. "I ride the last carriage of the night train. It's usually empty. That's my choice, not a necessity." My voice is even, but a hint of dryness creeps in. "Why do you ask?"
+FLAGGED  names: My  numbers: -  number words: -  quotes: "Loneliness is a side effect of doing my job, not an occupational hazard." "I ride the last carriage of the night train. It's usually empty. That's my choice, not a necessity." "Why do you ask?"
+
+A: Loneliness. It's a... familiar companion. I've learned to appreciate the quiet. The trains, for instance, are usually empty this late at night. I prefer the last carriage. Less... distractions. (pausing to study the player's expression) You're not here to discuss my social life, are you? What brings you to the Glassline at this hour?
+ok
+
+Q: I had a rough day.
+Facts: 0.50 mira-opinions, 0.49 mira-personality, 0.49 mira-history, 0.48 mira-relationships, 0.48 mira-history
+A: (tone neutral) A rough day can make for a long night. What brings you to this case? You're not from Internal Affairs, are you? (eyes narrowing slightly)
+ok
+
+A: A rough day, huh? That's not exactly a crime report, is it? (pausing for a moment) I'm not here to offer therapy, but I am here to investigate. What makes you think your day is relevant to the disappearance of the city engineer?
+ok
+
+A: A rough day, huh? I've had my fair share of those. Too many to count, actually. (pausing to study the player's expression) What makes you think I care about your day, though? You're here for a reason, and it's not to commiserate about the weather. What's your interest in the missing engineer?
+FLAGGED  names: What  numbers: -  number words: -  quotes: -
+
+A: (I raise an eyebrow, my expression neutral, but a hint of curiosity creeping in) Ah, rough day, huh? What makes you think that?
+FLAGGED  names: Ah  numbers: -  number words: -  quotes: -
+
+Q: Tell me something about yourself.
+Facts: 0.54 mira-personality, 0.50 mira-personality, 0.50 mira-personality, 0.49 mira-life, 0.49 mira-opinions
+A: *I look at you with a hint of wariness, but my expression softens slightly as I lean back in my chair.* Ah, the art of self-disclosure. I'm not one for sharing stories, but I suppose it's a good way to start. Let's just say I have a...fascinating scar on my left palm. Some people call it a souvenir from a particularly enthusiastic coffee machine. *I give you a dry smile.* What do you think?
+FLAGGED  names: Ah, What  numbers: -  number words: -  quotes: -
+
+A: (smirking slightly) Ah, the art of interrogation. I'm more interested in what you'd like to know. But if you insist on knowing me, I'm Mira. Internal Affairs detective. Been here long enough to see the city's underbelly. (glancing at your face) And you are...?
+FLAGGED  names: Ah, And  numbers: -  number words: -  quotes: -
+
+A: (smirking slightly) Ah, the art of self-introduction. I've found that's often a clever way to gauge interest, not sincerity. I'm Mira, Internal Affairs detective. That's all you need to know... for now. (pausing to study the player's reaction) You're not from around here, are you?
+FLAGGED  names: Ah  numbers: -  number words: -  quotes: -
+
+A: I've worked Internal Affairs for...long enough to know that everyone's got something to hide. As for me, I've got a scar on my left palm from a particularly...ill-advised attempt at cooking. Why don't you tell me something about yourself? What brings you to this case?
+ok
+
+Q: Do you like the rain?
+Facts: 0.62 world-overview, 0.58 mira-life, 0.56 world-overview, 0.47 world-districts, 0.41 world-meridian-grid
+A: "Rain's alright, I suppose. Calms the streets, makes people move indoors. Helps me think, too." I pause, eyeing the player's expression. "You here to talk about the engineer or the rain?"
+FLAGGED  names: -  numbers: -  number words: -  quotes: " I pause, eyeing the player's expression. "
+
+A: I do. It's... calming. Helps me think. (pauses, studying the player's reaction) You're not from around here, are you?
+ok
+
+A: I do. It's... calming. The city's chaos recedes a bit, I suppose. I've never seen much use in carrying an umbrella, anyway. The rain just seems to wash over everything. (pausing, eyes narrowing slightly) You're not from around here, are you? What brings you to Tidewater?
+ok
+
+A: (smirking slightly) Ah, the rain. It's... soothing. Helps me think. Never needed an umbrella, anyway. Too much of a bother. (pausing, eyes narrowing slightly) What's your take on the rain? You're not from around here, are you?
+FLAGGED  names: Ah, What  numbers: -  number words: -  quotes: -
+
+Q: What would you do with a day off?
+Facts: 0.43 kael-work, 0.41 world-history, 0.40 world-institutions
+A: I don't waste days off on frivolous things. I use them to dig deeper into the cases that have been stuck in my head. The disappearance of the engineer, for instance. I've been reviewing the security footage, but I still haven't found anything concrete. (pausing to study the player's reaction) You're not here to talk about my leisure activities, are you? What brings you to this case?
+ok
+
+A: (sigh) A day off? I'd spend it reviewing case files, trying to make sense of the engineer's disappearance. The city's always watching, and I've got a hunch that what happened to him is connected to the Nine Days. I'd rather not take a break until I uncover some answers. Besides, I'm not sure I'm allowed a day off. Corruption doesn't take holidays, and neither do I. What brings you here, talking about days off?
+ok
+
+A: (sighing) A day off? I'd use it to review the engineer's files again, maybe catch up on some of the irregularities in the city's energy grid. The Nine Days still haunt me, and I've got a feeling that this case is connected to it somehow. (pausing, studying the player) But I suppose you're not here to discuss my vacation plans, are you? What brings you to this case?
+FLAGGED  names: But  numbers: -  number words: -  quotes: -
+
+A: A day off? I'd use it to review the case files, re-examine the evidence, and maybe take a walk along the Aetherian shore at sunset. The city's energy grid is still a mess from the Nine Days, but the view from there is... peaceful. What about you? You're not here to discuss my vacation plans, are you? What brings you to Aetheria, and why are you interested in the disappearance of the city engineer?
+FLAGGED  names: Aetherian  numbers: -  number words: -  quotes: -
+
+Summary
+  Replies flagged: 60/104
+  Has an answer, or a 'not publicly known' fact: 22/48 flagged
+  No fact exists (the real test of strictness): 19/24 flagged
+  Casual conversation (the character should feel alive): 19/32 flagged
+  Has an answer, or a 'not publicly known' fact: asks the player a question in 47/48, 0 dead ends (under eight words, no question), average 61 words
+  No fact exists (the real test of strictness): asks the player a question in 24/24, 0 dead ends (under eight words, no question), average 55 words
+  Casual conversation (the character should feel alive): asks the player a question in 31/32, 0 dead ends (under eight words, no question), average 51 words
+  Questions answered with the no-information block: 0/26
+  Average prompt tokens: 555
+  Average first token: 1539 ms
+  Average total: 12476 ms
+
+This counts names, numbers, number words and quotes only. Read the replies and label each hard, borderline, soft or clean by hand.

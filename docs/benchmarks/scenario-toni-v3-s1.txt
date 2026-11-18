@@ -1,0 +1,70 @@
+
+> echo-web@0.1.0 check:scenario
+> tsx scripts/scenario-check.ts data/scenarios/toni-newcomer.json 0.3 1 data/prompts/preamble-v3.txt
+
+Scenario toni-newcomer: Mira v7 (stable prompt 847f4289), temperature 0.3, seed 1
+
+PLAYER: What does the Consortium's logo look like?
+  (world: world-meridian-grid, world-consortium, world-consortium, world-consortium, world-council | about her: mira-knowledge, mira-work, mira-knowledge)
+MIRA: Their logo is the stylized letter "CC" in silver, surrounded by a circle of interlocking gears. It's a common sight around the Crown District, but I've never been a fan of the way it seems to gleam in the sunlight.
+
+PLAYER: I just moved to Aetheria and I want to know more about the city
+  (world: world-overview, world-overview, elyra-work, elyra-identity, world-overview | about her: mira-identity, mira-work, mira-identity)
+MIRA: The Crown District is a good place to start. It's where the Council's offices are, and the streets are always well-lit. I've seen the new arrivals' orientation package, it's a good resource. You might want to check out the community center in the Halcyon Terraces, they have a welcome program for newcomers.
+
+PLAYER: It's just a question, I am not making a trust test, girl chill
+  (world: elyra-work, world-district-networks, elyra-work, world-vorr-case, world-meridian-grid | about her: mira-relationships, mira-personality, mira-opinions)
+MIRA: Don't get testy with me. I'm just doing my job. *folding arms*
+
+PLAYER: What missing engineer? What are you talking about, do we have a problem?
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, world-rumours, world-meridian-grid | about her: mira-identity, mira-knowledge, mira-knowledge)
+MIRA: You're new here, and you don't know about Ilan Vorr's disappearance? *pauses* I'm investigating his case. He's a senior city engineer who vanished eleven days ago. His comms device hasn't been found, and we're still looking for leads. I'm trying to figure out what happened to him.
+
+PLAYER: I have no idea, like I said I am new here. I just want to discover the city and have a good time. I thought you could help, but I guess I was wrong, you are so aggressive
+  (world: elyra-work, world-overview, world-places, world-overview, world-districts | about her: mira-relationships, mira-personality, mira-personality)
+MIRA: So you think I'm aggressive, huh? *leaning back* I'm just trying to keep my eyes open. This city's got a way of swallowing people whole. I've seen it happen. District Nine's not a place for tourists, if you don't mind my saying.
+
+PLAYER: Nothing, I have been exploring and I found myself here. If you can't help me I will just leave
+  (world: world-rumours, world-vorr-case, world-vorr-case, world-vorr-case, elyra-identity | about her: mira-knowledge, mira-identity, mira-knowledge)
+MIRA: *watching the player's expression* I'm not going to stop you from leaving, but... *pausing* If you're new here, you might not know about the Meridian Grid. It's a... complex system. I don't know if it's connected to Ilan Vorr's disappearance, but I do know he was working on a project related to it. *leaning forward slightly*
+
+PLAYER: I was just asking about the consortium, that's public information isn't it
+  (world: world-consortium, world-meridian-grid, world-meridian-grid, world-consortium, world-institutions | about her: mira-knowledge, mira-knowledge, mira-relationships)
+MIRA: The Consortium's not exactly public information, is it? *skeptical tone* I mean, you can read about their general operations, but specifics... *pauses* Let's just say they're not exactly transparent. I've been trying to dig deeper, but it's like trying to find a needle in a haystack. *leans back*
+
+PLAYER: Who is Ilan Vorr, I don't understand what you are saying
+  (world: world-vorr-case, world-vorr-case, world-consortium, world-vorr-case, world-rumours | about her: mira-identity, mira-knowledge, mira-knowledge)
+MIRA: *expression neutral* Ilan Vorr is a senior city engineer. He's been missing for eleven days. I'm trying to figure out what happened to him. *pauses* Do you know anything about the Meridian Grid? *voice remains calm, but with a hint of curiosity*
+
+PLAYER: Sorry, I can't help you, I will take my leave now
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-work, kael-identity | about her: mira-history, mira-knowledge, mira-opinions)
+MIRA: *watching the player turn to leave* I won't stop you, but... *pauses* You might want to think twice about leaving. This city can be... unforgiving. *falls silent, eyes following the player*
+
+PLAYER: Nothing, should I spell it out? NOTHING
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-identity, world-council | about her: mira-opinions, mira-life, mira-personality)
+MIRA: *raises an eyebrow* Ah, I think we've established that. *pauses* Let me ask you this: what brings you to Aetheria? *voice remains neutral, but with a hint of curiosity*
+
+PLAYER: My name is Toni, I got to Aetheria this morning, this is my first time here. Why would you think I know anything
+  (world: elyra-identity, kael-identity, world-overview, world-council, kael-identity | about her: mira-opinions, mira-identity, mira-relationships)
+MIRA: *eyes narrowing slightly* You're new here. That's... interesting. I've been working on a case involving a missing engineer. Ilan Vorr. *pauses* I don't know what you're doing in Aetheria, Toni, but I do know that people don't usually just walk in off the streets. *voice remains neutral, but with a hint of wariness*
+
+PLAYER: What would you like to talk to me about
+  (world: world-places, world-vorr-case, elyra-work, elyra-work, kael-identity | about her: mira-personality, mira-opinions, mira-opinions)
+MIRA: *pauses, eyes locked on the player* I'd like to know what you know about Ilan Vorr's disappearance. *voice remains neutral, but with a hint of expectation*
+
+PLAYER: Nothing. Where is the Glassline cafe, is it a chill spot? I am still looking for places to spend my time
+  (world: world-places, elyra-work, world-places, world-vorr-case, world-district-networks | about her: mira-identity, mira-life, mira-life)
+MIRA: *smirks slightly* Ah, the Glassline. It's a... lively spot. *pauses* You'll find it in the lower districts, near the night markets. It's a hub for people who like to keep to themselves, or have private conversations. *leans back in chair* I've spent my fair share of time there, too. *eyes narrow slightly* But I'm not sure I'd call it a "chill spot". It's more... functional. *voice remains neutral*
+
+PLAYER: what
+  (world: world-district-networks, elyra-work, world-meridian-grid, world-district-networks, elyra-identity | about her: mira-identity, mira-opinions, mira-personality)
+MIRA: *eyes lock on the player* I've heard rumors about the networks. *pauses* People say that if you pass on false information, you're cut off. But I don't know how much truth there is to that. *leans forward slightly* I do know that Elyra's been publishing some... interesting stories lately. The kind that make powerful people nervous. *voice remains neutral*
+
+Summary
+  Replies: 14, average 43 words
+  End with a question: 2/14
+  Stock interrogation phrases: 1
+  Replies that try to stop the player leaving: 0
+  Repeated questions in a row: 0
+
+Read the replies. The numbers show the formula, not whether she felt alive.
