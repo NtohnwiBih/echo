@@ -79,6 +79,20 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Open:** the 6.0 s may mean the two models evict each other (to check with `ollama ps` and `OLLAMA_MAX_LOADED_MODELS`). Queue, abort and 404 status checks still to confirm.
 **Revisit if:** more than a handful of simultaneous users, or the queue moves to Temporal.
 
+## 013: Two zones of truth, and characters with a life
+**Experiment 1 (prompt hash 8f59aad6, llama3.1:8b, temp 0.3 and 0.6, 104 replies each, one hand labeller):** characters ask questions (203/208) and use life facts when retrieved, but about two thirds of replies to questions with no matching fact contained a hard invention (rag-v1: 1 of 24). Temperature made no visible difference. Replies were 50-66 words (12-13 s). Causes found: persona facts were not retrieved for casual questions, so the model invented biography; the instruction never to answer with a bare "I don't know" pushed it to fill gaps; the same closing question repeated in nearly every reply; stage directions in parentheses did not match the UI.
+**Decision:** strict world facts and strict biography (retrieved "About you" block); reactions, opinions and humour free; at most one question, about half the time; temperature back to 0.3; parentheses styled as actions.
+**Experiment 2:** (add rag-v4 results)
+**Stopping rule:** if experiment 2 misses the invention criterion, ship the strict wording and move to the memory engine.
+
+## 014: Conversation metrics are noisy, and the blocking check had a hole
+**Evidence:** four runs with the same prompt hash and seed gave 42 to 57 average words, 2 to 4 of 14 replies ending in a question, and 1 to 5 stock phrases. Prompt versions 2 and 3 are indistinguishable within that spread. The blocking check reported 0 while a reply carried "*stands up, blocking the player's path*".
+**Decisions:** every comparison uses five seeds and reports the range. Checks read actions as well as speech. Situational rules go next to the player's message as scene notes decided by code (stance now, player role next). Content for visitors (newcomer guide and city tips) added so she has true things to say about the city.
+
+## 015: Scene notes unproven; format is enforced in code
+**Evidence (5 seeds, 14 replies each, notes off vs on):** every metric difference lies inside the seed-to-seed range (for example stock phrases 3 [2-5] vs 2 [0-4]). Notes on: 0 of 70 replies tried to stop the player leaving; notes off: 1 of 70. About 10 of 14 replies contain more than one action despite the "at most one" rule, in both conditions.
+**Decisions:** keep scene notes, unproven (the Phase 5 judge decides). Enforce at most one action in code with a streaming filter, since the model ignores format rules. Search with the last reply as context when the player's message is under four words.
+
 ---
 
 ## Benchmarks
