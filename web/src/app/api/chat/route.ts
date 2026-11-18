@@ -8,6 +8,8 @@ import { retrieveFacts } from "@/lib/content/retrieve";
 import { prisma } from "@/lib/prisma";
 import { buildMessages } from "@/lib/prompt";
 import { buildSceneNotes, detectStance } from "@/lib/chat/stance";
+import { retrievalQuery } from "@/lib/chat/retrieval-query";
+import { createActionLimiter } from "@/lib/chat/actions";
 
 const bodySchema = z.object({
   character: z.string().min(1),
@@ -62,7 +64,7 @@ export async function POST(request: Request) {
             prisma,
             gateway,
             character: slug,
-            question: message,
+            question: retrievalQuery(message, history),
           });
 
           const assistant = await prisma.message.create({
@@ -72,6 +74,7 @@ export async function POST(request: Request) {
           send({ type: "start", conversationId, messageId: assistant.id });
 
           try {
+            const limiter = createActionLimiter(1);
             for await (const piece of gateway.generate({
               messages: buildMessages({
                 character,
@@ -84,8 +87,10 @@ export async function POST(request: Request) {
               messageId: assistant.id,
               signal: request.signal,
             })) {
-              reply += piece;
-              send({ type: "delta", text: piece });
+              const clean = limiter.push(piece);
+              if (!clean) continue;
+              reply += clean;
+              send({ type: "delta", text: clean });
             }
           } finally {
             // Saves the whole reply, or whatever arrived if the stream broke.

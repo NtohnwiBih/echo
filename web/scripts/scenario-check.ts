@@ -19,6 +19,8 @@ import type { ChatMessage } from "../src/lib/gateway/types";
 import { prisma } from "../src/lib/prisma";
 import { buildMessages, buildStableSystemPrompt } from "../src/lib/prompt";
 import { promptHash } from "../src/lib/prompt-hash";
+import { retrievalQuery } from "@/lib/chat/retrieval-query";
+import { limitActions } from "@/lib/chat/actions";
 
 /**
  * Replays a scripted player against a character, once per seed, and reports
@@ -108,7 +110,7 @@ async function main() {
         prisma,
         gateway,
         character: scenario.character,
-        question: line,
+        question: retrievalQuery(line, history.slice(-HISTORY_WINDOW)),
       });
       const sceneNotes = useNotes
         ? buildSceneNotes({ role: scenario.playerRole, stance: detectStance(line) })
@@ -130,6 +132,8 @@ async function main() {
       })) {
         reply += piece;
       }
+
+      if (!flags.has("--raw")) reply = limitActions(reply, 1);
 
       if (show) {
         const ids = (list: typeof world) =>
