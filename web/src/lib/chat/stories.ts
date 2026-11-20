@@ -4,28 +4,42 @@ export type StoryEntry = {
   suggestions: string[];
 };
 
+/**
+ * What the page shows before the player says anything. Every player starts as
+ * a newcomer who has just arrived in Aetheria. The opening is a short scene in
+ * *italics*, then the character speaks. The chips mix exploring the city with
+ * following the mystery, so the player chooses their own path.
+ */
 const stories: Record<string, StoryEntry> = {
   mira: {
     subtitle: "Aetheria · Unproven source",
     opening:
-      "*Mira closes the office door and turns her evidence slate face down.* You asked about Vorr. That name has a way of making records disappear. Before I show you anything, what brought you to his case?",
-    suggestions: ["What did Vorr uncover?", "Who sealed his file?", "Examine the access logs"],
+      "*Dawn rain on the Glassline platform. A woman in a dark coat is the only one waiting for the last carriage, a paper cup of tea steaming in her hand. She glances at your pass, then at you.* New to Aetheria? It shows. The city is kind to nobody on their first morning, so here is one free piece of advice: keep your pass on you. Where are you headed?",
+    suggestions: [
+      "Where should I eat?",
+      "Is the city safe?",
+      "People seem tense. What's going on?",
+    ],
   },
   kael: {
     subtitle: "Aetheria · Stranger",
     opening:
-      "*Kael keeps working on a dismantled relay and does not look up.* Stall's open until the market closes. State your business.",
+      "*Under the corrugated roofs of the District Nine night market, a broad-shouldered man looks up from a gutted radio. A one-eyed dog watches you from beneath his stall.* Lost, or just looking? Either is fine. The stew next door is worth the wait, and the rain is coming sideways tonight.",
     suggestions: [
-      "Do you know Vorr?",
-      "What have the blackouts been like?",
-      "Tell me about District Nine",
+      "What's good to eat here?",
+      "What are you fixing?",
+      "Why do the drones stay lit?",
     ],
   },
   elyra: {
     subtitle: "Aetheria · Stranger",
     opening:
-      "*Elyra slides into the booth across from you and sets her recorder on the table, switched off.* People only talk here when they think no one is listening. So, what are you listening for?",
-    suggestions: ["What have your sources heard?", "Tell me about the Grid", "Who can I trust?"],
+      "*In a Glassline café between the last two trains, a woman with red-brown hair waves you into the booth facing the door, her recorder switched off on the table.* Fresh face. I can always tell. Sit. The first coffee is on me, and the price is a story. What brought you to Aetheria?",
+    suggestions: [
+      "What are people talking about?",
+      "Tell me about the Glassline",
+      "Who can I trust here?",
+    ],
   },
 };
 

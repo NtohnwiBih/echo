@@ -80,7 +80,10 @@ export async function POST(request: Request) {
                 character,
                 facts: world,
                 persona,
-                sceneNotes: buildSceneNotes({ stance: detectStance(message) }),
+                sceneNotes: buildSceneNotes({
+                  role: "newcomer",
+                  stance: detectStance(message),
+                }),
                 history,
                 userMessage: message,
               }),

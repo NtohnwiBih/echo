@@ -29,7 +29,7 @@ export function detectStance(message: string): Stance {
 
 const ROLE_NOTES: Record<PlayerRole, string> = {
   newcomer:
-    "The player is a newcomer who has just arrived in Aetheria and knows nothing about the case. Do not ask what they know about it. Welcome them and offer to show them around.",
+    "The player is a newcomer who arrived in Aetheria today, and you have just met. They may explore the city, get to know you, or help with the mystery of the missing engineer. Follow what they show interest in. Do not ask what they know about the case, and share case details only if they ask and you have come to trust them. Keep your reply to two or three sentences.",
   investigator:
     "The player has come about the Vorr case. Share what you can, as far as you trust them.",
   local: "The player lives in Aetheria and knows the city well.",
