@@ -93,6 +93,11 @@ Format for each entry: **Context → Options → Decision → Evidence → Revis
 **Evidence (5 seeds, 14 replies each, notes off vs on):** every metric difference lies inside the seed-to-seed range (for example stock phrases 3 [2-5] vs 2 [0-4]). Notes on: 0 of 70 replies tried to stop the player leaving; notes off: 1 of 70. About 10 of 14 replies contain more than one action despite the "at most one" rule, in both conditions.
 **Decisions:** keep scene notes, unproven (the Phase 5 judge decides). Enforce at most one action in code with a streaming filter, since the model ignores format rules. Search with the last reply as context when the player's message is under four words.
 
+## 016: Product framing: a cinematic experience with a chosen path
+**Decision:** every player starts as a newcomer. The experience is a fusion of game and cinematic experience: relationships with the characters, discovering Aetheria, and a free choice between helping with the mystery or making their own story. Characters follow the player's interest, and share case details only with trust. Openings are short scenes. Path and trust become state in the story engine (Phase 6), and relationship memory arrives in Phase 3.
+**Evidence (scenario D, 5 seeds):** the newcomer role note made replies about 40% longer (48 [45-50] to 68 [64-72] words), changed tone (welcoming, warm goodbye, no accusations in the replies I could see), and left questions and blocking unchanged.
+**Next:** shorten replies by stopping generation after a set number of sentences (also saves time), and persist the path state.
+
 ---
 
 ## Benchmarks
