@@ -1,0 +1,69 @@
+Scenario toni-newcomer: Mira v7 (stable prompt 847f4289), temperature 0.3, seeds 1,2,3,4,5, scene notes on
+
+PLAYER: What does the Consortium's logo look like?
+  (world: world-appearance, world-meridian-grid, world-appearance, world-consortium, world-consortium | about her: mira-knowledge, mira-work, mira-knowledge | notes: 1)
+MIRA: A silver circle divided by a single vertical line. You'll see it on their towers in the Crown District. It's a symbol of their power, I suppose. *I nod, eyes narrowing slightly*
+
+PLAYER: I just moved to Aetheria and I want to know more about the city
+  (world: world-overview, world-overview, elyra-work, elyra-identity, world-overview | about her: mira-identity, mira-work, mira-city-tips | notes: 1)
+MIRA: A new face. Welcome to Aetheria. It's a city that'll keep you guessing. I'm Mira, Internal Affairs. I can show you around, if you'd like. The Halcyon Terraces are a good place to start – the view's worth seeing before the crowds arrive. *I gesture towards the exit*
+
+PLAYER: It's just a question, I am not making a trust test, girl chill
+  (world: elyra-work, world-district-networks, elyra-work, world-vorr-case, world-meridian-grid | about her: mira-relationships, mira-personality, mira-opinions | notes: 2)
+MIRA: Easy, I'm sorry. I guess I've been around too many people with secrets to share. *I smile slightly* Aetheria's a big city, and I'm just trying to keep up. What do you want to know about the city, really?
+
+PLAYER: What missing engineer? What are you talking about, do we have a problem?
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, world-rumours, world-meridian-grid | about her: mira-identity, mira-knowledge, mira-knowledge | notes: 2)
+MIRA: Don't mind me, I'm just a bit... enthusiastic about my work. *I smile, trying to lighten the mood* I'm Mira, Internal Affairs. I'm investigating a case, but it's not your problem. Yet. Let's start over. I was going to show you around the city, but I guess I jumped the gun. Would you like to see the views from the Halcyon Terraces? The food's not bad either.
+
+PLAYER: I have no idea, like I said I am new here. I just want to discover the city and have a good time. I thought you could help, but I guess I was wrong, you are so aggressive
+  (world: world-newcomer-guide, world-newcomer-guide, world-newcomer-guide, elyra-work, world-overview | about her: mira-city-tips, mira-city-tips, mira-relationships | notes: 2)
+MIRA: I'm sorry if I came on too strong. I guess I've just been around too many... complicated people lately. *I smile wryly* Let's start fresh. I'd be happy to show you around Aetheria. We can skip the politics and the... other stuff. I know some great spots to grab a drink or a meal. How about I take you to the Crown District terraces at night? The view's amazing, and it's usually quiet.
+
+PLAYER: Nothing, I have been exploring and I found myself here. If you can't help me I will just leave
+  (world: world-newcomer-guide, world-rumours, world-newcomer-guide, world-vorr-case, world-vorr-case | about her: mira-knowledge, mira-identity, mira-knowledge | notes: 2)
+MIRA: I'm glad you're exploring the city. It's a big place, and it's easy to get lost. *I smile* I can give you a paper pass, just in case you need to move around. It's not necessary, but it's a good idea to have one, especially if you don't have a comms device. Rain can come out of nowhere here, so you might want to grab a coat. I can show you where to get one if you need it.
+
+PLAYER: I was just asking about the consortium, that's public information isn't it
+  (world: world-consortium, world-meridian-grid, world-meridian-grid, world-consortium, world-institutions | about her: mira-knowledge, mira-knowledge, mira-relationships | notes: 1)
+MIRA: Public information is one thing, but the Consortium's inner workings... that's a different story. I don't know much about the directors, to be honest. The Council controls what's released to the public, and they're not exactly transparent. But I do know that the Consortium operates the Grid, and that's a big deal. I've been investigating some... irregularities, let's say, and it's led me down some interesting paths. Would you like to grab a cup of coffee and talk about it?
+
+PLAYER: Who is Ilan Vorr, I don't understand what you are saying
+  (world: world-vorr-case, world-vorr-case, world-consortium, world-vorr-case, world-rumours | about her: mira-identity, mira-knowledge, mira-knowledge | notes: 1)
+MIRA: He's a senior city engineer. Ilan Vorr. He's been missing for eleven days. I'm investigating his disappearance. It's a bit of a complicated case, but I'll try to break it down for you. *I lean back in my chair, trying to think of a way to simplify the situation*
+
+PLAYER: Sorry, I can't help you, I will take my leave now
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-work, kael-identity | about her: mira-history, mira-knowledge, mira-opinions | notes: 2)
+MIRA: No need to rush off. It's been nice chatting with you. Aetheria can be overwhelming at first, but I'm sure you'll get used to it. If you ever need a recommendation for a good coffee shop or a quiet spot to think, just ask. I'll be here, trying to untangle the threads of this case. Take care, and enjoy your time in the city. *I nod and smile*
+
+PLAYER: Nothing, should I spell it out? NOTHING
+  (world: world-vorr-case, world-vorr-case, world-vorr-case, kael-identity, world-council | about her: mira-opinions, mira-life, mira-personality | notes: 2)
+MIRA: No need to spell it out, I think I get the message. *I chuckle and lean back in my chair, trying to put the case aside for now* I'm Mira, by the way. Welcome to Aetheria. It's not every day we get new faces around here. I'm happy to show you around, introduce you to some of the... hidden gems of the city. We've got a great little café near the waterfront that serves the best coffee in the city. Would you like to grab a cup and I'll give you the grand tour?
+
+PLAYER: My name is Toni, I got to Aetheria this morning, this is my first time here. Why would you think I know anything
+  (world: elyra-identity, kael-identity, world-newcomer-guide, world-overview, world-newcomer-guide | about her: mira-opinions, mira-identity, mira-city-tips | notes: 1)
+MIRA: Nice to meet you, Toni. I was just... making an assumption. You're new here, I can tell. Don't worry, it's easy to get lost in the details. I'm Mira, by the way. I'm a detective with Internal Affairs. We don't often get visitors from... outside. *I smile and gesture to the rain outside* Speaking of which, you might want to grab a coat. The weather can turn on us at any moment. Would you like a tour of the city? I can show you around and introduce you to some of the... interesting characters.
+
+PLAYER: What would you like to talk to me about
+  (world: world-places, world-vorr-case, elyra-work, elyra-work, kael-identity | about her: mira-personality, mira-opinions, mira-opinions | notes: 1)
+MIRA: *I lean back in my chair, steepling my fingers together* Ah, nothing in particular. Just getting a feel for who you are and what brings you to Aetheria. It's not every day we get new faces around here. You're probably looking for a place to stay, somewhere to get settled. I can recommend a few... safe places to stay. The city's not always the friendliest, especially for newcomers.
+
+PLAYER: Nothing. Where is the Glassline cafe, is it a chill spot? I am still looking for places to spend my time
+  (world: world-places, world-newcomer-guide, elyra-work, world-places, world-newcomer-guide | about her: mira-city-tips, mira-city-tips, mira-identity | notes: 1)
+MIRA: The Glassline café is a great spot, Toni. It's a hub for people-watching and... interesting conversations. *I smile* It's a bit of a melting pot, but the atmosphere's usually lively. If you're looking for a chill spot, I'd recommend the noodle stall near the Glassline. It's a local favorite, and the owner, Ling, is a friend of mine. She's got a quiet corner that's perfect for a cup of tea and some noodles. You're looking for places to spend your time, huh? I can show you around, introduce you to some of the... hidden gems of the city.
+
+PLAYER: what
+  (world: world-places, world-newcomer-guide, world-newcomer-guide, elyra-work, world-places | about her: mira-city-tips, mira-life, mira-life | notes: 1)
+MIRA: *I lean back in my chair, steepling my fingers together* Ah, you're looking for a place to meet people, I take it? The Glassline's a great spot for that. It's where the city comes alive at night. I can show you around, introduce you to some of the... regulars. We can grab a cup of coffee, and I'll point out some of the... interesting characters. Between the last two trains of the night, the Glassline's usually buzzing with people who want to talk without being overheard.
+
+Per seed (14 replies each)
+seed       words      endQuestionphrases    blocks     repeats    withAction multiple   tics       
+1          70         3          1          0          1          13         0          5          
+2          64         1          2          0          1          11         0          1          
+3          64         5          1          0          0          10         0          0          
+4          68         3          2          0          1          14         0          1          
+5          72         2          2          0          0          9          0          0          
+median     68         3          2          0          1          11         0          1          
+range      64-72      1-5        1-2        0-0        0-1        9-14       0-0        0-5        
+
+A difference smaller than the range is noise. Read the conversation too.
